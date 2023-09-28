@@ -1,0 +1,15 @@
+{
+  "lang": "en",
+  "metas": {
+    "title": "=title",
+    "site": "Site Header",
+    "lang": "en",
+    "description": "=description"
+  },
+  "priority": 1.0,
+  "author": {
+    "name": "Author",
+    "email": "author@example.tld",
+    "url": "https://url.to.site"
+  }
+}

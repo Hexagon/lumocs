@@ -1,0 +1,130 @@
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github-dark.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
+
+/* Theme */
+:root {
+    /* Custom */
+    --badge-color: #333;
+    --badge-background: #CCC;
+    --badge-color-alt: #333;
+    --badge-background-alt: rgb(8, 211, 247);
+    --header-border-color: rgb(228,229,231);
+    --footer-background-color: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --header-border-color: rgb(42, 44, 45);
+        --footer-background-color: rgb(12, 18, 22);
+    }
+}
+
+[data-theme="dark"] {
+    --header-border-color: rgb(42, 44, 45);
+    --footer-background-color: rgb(12, 18, 22);
+}
+
+/* Reset Pico CSS Responsive padding */
+body > header, body > footer, body > main {
+    padding: 0;
+}
+
+body {
+    min-height: 100%;
+}
+
+/* Pico CSS Overrides */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+:root {
+    --font-size: 13px;
+}
+@media (min-width: 576px) {
+    :root {
+        --font-size: 14px;
+    }
+}
+@media (min-width: 768px) {
+    :root {
+        --font-size: 15px;
+    }
+}
+@media (min-width: 992px) {
+    main .grid {
+        grid-template-columns: auto 25%;
+    }
+}
+
+/* Highlightjs Customization */
+.hljs {
+    border-radius: 3px;
+}
+
+/* Header */
+header {
+    border-bottom: 1px solid;
+    border-color: var(--header-border-color);
+    margin-bottom: 2rem;
+}
+header nav {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+#theme-switcher {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Minimum height of the viewport */
+}
+
+main {
+    flex: 1; /* This allows it to grow and take up all available space */
+    padding: 20px;
+}
+
+main.container {
+    flex: 1; /* This allows it to grow and take up all available space */
+    padding: 20px;
+}
+
+/* Footer */
+footer{
+    border-top: 1px solid var(--header-border-color);
+    background-color: var(--footer-background-color);
+    margin-top: 3rem;
+
+}
+footer .grid {
+    padding-top: 2rem;
+}
+footer li {
+    list-style: none;
+}
+
+/* Sidebar */
+aside {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+aside li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+h4 {
+    margin-bottom: 18px;
+}
+aside nav {
+    margin-bottom: 18px;
+}
+
+/* Alignment */
+.right {
+    float: right;
+    text-align: right;
+}

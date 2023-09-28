@@ -1,0 +1,10 @@
+{
+  "lang": "en",
+  "layout": "page.njk",
+  "metas": {
+    "title": "=title",
+    "site": "Site Header",
+    "lang": "en",
+    "description": "=description"
+  }
+}

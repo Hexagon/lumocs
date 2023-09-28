@@ -1,0 +1,11 @@
+<nav>
+    <ul>
+        {% for navPage in search.pages("layout=page.njk","nav_order=asc") %}
+            <li>
+                <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+{% include "sidebar.njk" %}
