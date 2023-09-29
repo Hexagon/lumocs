@@ -1,33 +1,36 @@
 # Lumocs Documentation Theme for Lume
 
-Lumocs offers an elegant documentation theme for Lume, comparable to
-"just-the-docs" for Jekyll. For a detailed guide, visit
+Lumocs provides an elegant documentation theme for Lume, akin to "just-the-docs"
+for Jekyll. Dive deeper into the
 [Lumocs Documentation](https://lumocs.56k.guru).
 
 ## Setup
 
-1. **Configuration**: Set up [`_config.ts`](./demo-repository/_config.ts) to
-   incorporate Lumocs with Lume.
+1. **Configuration**: Set up [`_config.ts`](./demo-repository/docs/_config.ts)
+   to seamlessly integrate Lumocs with Lume.
 2. **Metadata**: Define your site's metadata in
-   [`src/_data.json`](./demo-repository/src/_data.json).
-3. **Deno Tasks**: Adjust Deno tasks in
-   [`deno.json`](./demo-repository/deno.json).
-4. **Customization**: Customize your site using the
-   [`_includes`](./demo-repository/_includes) directory.
-5. **Content**: Design your content using Markdown, example
-   [`src/index.md`](./demo-repository/src/index.md) .
+   [`_data.json`](./demo-repository/docs/src/_data.json).
+3. **Deno Tasks**: Configure your Deno tasks within
+   [`deno.json`](./demo-repository/docs/deno.json).
+4. **Content**: Design your content using Markdown. See the example at
+   [`index.md`](./demo-repository/docs/src/index.md).
 
 ## Commands
 
-- Build your site: `deno task lume`
+- To build your site, use the command: `deno task lume`
 
 ## Examples & Deployment
 
-- Refer to the [`demo-repository`](./demo-repository) for a full setup and
-  example workflow.
-- For deploying on GitHub Pages, follow the instructions in
+- For a comprehensive setup of Lumocs in a `/docs` directory, check out the
+  [`demo-repository`](./demo-repository).
+- To deploy on GitHub Pages, follow the guidelines provided in
   [`deploy-pages.yml`](./demo-repository/.github/workflows/deploy-pages.yml).
 
 ## License
 
-Lumocs is licensed under the MIT License.
+Lumocs is available under the MIT License.
+
+---
+
+This version emphasizes clarity and maintains a consistent tone throughout the
+README.
