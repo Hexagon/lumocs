@@ -12,10 +12,10 @@ Easily integrate Lumocs into your Lume project by following these steps:
 
 ```typescript
 import lume from "lume/mod.ts";
-import theme from "lumocs/mod.ts";
+import lumocs from "lumocs/mod.ts";
 
 const site = lume();
-site.use(theme());
+site.use(lumocs());
 
 export default site;
 ```
@@ -33,6 +33,11 @@ export default site;
     "description": "=description"
   }
 }
+
+
+If you host your site in a subfolder, add the configuration `basePath: "/subfolder-path"` without the trailing slash.
+
+
 ```
 
 ### 3. Create Deno Tasks (`deno.json`)
@@ -48,7 +53,7 @@ Ensure you're using the version of Lume that's compatible with Lumocs, which is 
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v1.19.0/",
-    "lumocs/": "https://deno.land/x/lumocs@0.0.1/"
+    "lumocs/": "https://deno.land/x/lumocs@0.0.2/"
   }
 }
 ```

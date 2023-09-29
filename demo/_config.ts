@@ -1,8 +1,10 @@
 import lume from "lume/mod.ts";
-import theme from "lumocs/mod.ts";
+import lumocs from "lumocs/mod.ts";
 
-const site = lume();
+const site = lume({
+    src: "src"
+});
 
-site.use(theme());
+site.use(lumocs());
 
 export default site;
