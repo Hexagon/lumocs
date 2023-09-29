@@ -28,7 +28,7 @@ export default function (options: Partial<Options> = {}) {
       "_includes/partials/footer.njk",
       "_includes/partials/sidebar.njk",
       "_includes/page.njk",
-      "_data.json"
+      "_data.json",
     ];
 
     for (const file of files) {

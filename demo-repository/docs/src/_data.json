@@ -1,7 +1,6 @@
 {
   "lang": "en",
   "layout": "page.njk",
-  "basePath": "",
   "metas": {
     "title": "=title",
     "site": "Site Header",

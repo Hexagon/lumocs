@@ -16,7 +16,6 @@ import lang_xml from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/langua
 import lang_json from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/json.min.js";
 import lang_yaml from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/yaml.min.js";
 
-
 export interface Options {
   prism?: Partial<PrismOptions>;
   date?: Partial<DateOptions>;
@@ -51,6 +50,6 @@ export default function (options: Options = {}) {
         priority: "priority",
       }))
       .copy("css")
-      .copy("js")
+      .copy("js");
   };
 }
