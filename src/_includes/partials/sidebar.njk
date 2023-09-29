@@ -1,8 +1,9 @@
 <nav>
     <ul>
+        <!-- Page Hierarchy -->
         {% for navPage in search.pages("layout=page.njk","nav_order=asc") %}
             {% if not navPage.data.parent %}
-                <li class="level0">
+                <li class="level0 bold">
                     <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
                 </li>
                 {% set searchParam1 = ["parent=", navPage.data.title] | join %}
@@ -18,6 +19,18 @@
                     {% endfor %}
                 {% endfor %}
             {% endif %}
+        {% endfor %}
+
+        <!-- Spacer -->
+        <li><!-- Spacer -->&nbsp;</li>
+
+        <!-- Adding navLinks from _data.json -->
+        {% for link in navLinks %}
+            <li class="level0">
+                <a href="{{ link.url }}" title="{{ link.title }}">
+                    {{ link.title }} <i class="fa fa-external-link" aria-hidden="true"></i>
+                </a>
+            </li>
         {% endfor %}
     </ul>
 </nav>

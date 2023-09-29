@@ -4,6 +4,24 @@ Lumocs provides an elegant documentation theme for Lume, akin to "just-the-docs"
 for Jekyll. Dive deeper into the
 [Lumocs Documentation](https://lumocs.56k.guru).
 
+## Features
+
+- **Elegant Design**: A clean and professional look suitable for documentation.
+- **Hierarchical Navigation**: Supports up to three levels of content hierarchy
+  for organized navigation.
+- **Responsive**: Fully mobile-friendly and adapts to various screen sizes.
+- **Customizable**: Easily tailor the look and feel through `_data.json` and
+  `_includes` directory.
+- **Integrated Search**: Quick and efficient content search capability.
+- **Dark Mode**: Built-in theme switcher for light and dark mode preferences.
+- **Markdown Enhanced**: Supports `markdown-it` syntax for rich content
+  creation.
+- **Fast Performance**: Optimized for speed and efficiency.
+- **Using Modern Tools**: Utilizes Deno and Lume, to reduce bloat and working
+  efficiently.
+- **Ready for GitHub Pages**: Automatically build and deploy the site on pushing
+  to your repository.
+
 ## Setup
 
 1. **Configuration**: Set up [`_config.ts`](./demo-repository/docs/_config.ts)

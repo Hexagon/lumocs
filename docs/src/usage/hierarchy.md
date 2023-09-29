@@ -6,11 +6,15 @@ nav_order: 3
 
 ## Hierarchical Structuring in Lumocs
 
-In Lumocs, the hierarchical structure of your documentation is determined using the `title` and `parent` front-matter in your Markdown files. This allows for the creation of a structured navigation sidebar and organized content presentation.
+In Lumocs, the hierarchical structure of your documentation is determined using
+the `title` and `parent` front-matter in your Markdown files. This allows for
+the creation of a structured navigation sidebar and organized content
+presentation.
 
 ### First Level: Main Sections
 
-The first level typically consists of main sections or categories. These are top-level items that act as general buckets or categories for your content.
+The first level typically consists of main sections or categories. These are
+top-level items that act as general buckets or categories for your content.
 
 Example:
 
@@ -19,7 +23,7 @@ Example:
 title: "Getting Started"
 nav_order: 1
 ---
-````
+```
 
 ### Second Level: Subsections
 
@@ -89,4 +93,3 @@ Remember, a clear and organized structure can enhance the readability and
 usability of your documentation. Use the hierarchical capabilities and
 recommended file structure wisely to create a seamless experience for your
 readers.
-

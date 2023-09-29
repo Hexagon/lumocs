@@ -7,5 +7,7 @@
     "site": "Site Header",
     "lang": "en",
     "description": "=description"
-  }
+  },
+  "topLinks": [],
+  "navLinks": []
 }

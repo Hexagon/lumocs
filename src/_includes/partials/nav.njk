@@ -8,6 +8,12 @@
   </ul>
   <ul>
     <li><span id="theme-switcher"><i id="theme-icon" class="fas fa-moon"></i></span></li>
-    <li><a href="https://url.to.site" title="Website"><i class="fas fa-globe me-2"></i></a></li>
+    {% for link in topLinks %}
+      <li>
+        <a href="{{ link.url }}" title="{{ link.title }}" title="{{ link.title }}">
+          <i class="{{ link.icon }}"></i>
+        </a>
+      </li>
+    {% endfor %}
   </ul>      
 </nav>

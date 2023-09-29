@@ -41,7 +41,7 @@ export default function (options: Options = {}) {
             xml: lang_xml,
             json: lang_json,
             yaml: lang_yaml,
-            lang_markdown: lang_markdown
+            lang_markdown: lang_markdown,
           },
         }),
       )
@@ -61,11 +61,10 @@ export default function (options: Options = {}) {
       "css/github-dark.min.css",
       "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github-dark.min.css",
     );
-    
+
     // Copy files
     site
       .copy("css")
-      .copy("js")
-
+      .copy("js");
   };
 }

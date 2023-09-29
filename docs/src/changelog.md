@@ -9,6 +9,12 @@ This page documents all the changes, updates, and improvements made to the
 project over time. It's a great way to keep track of the project's evolution and
 understand the changes at a glance.
 
+## Version 0.0.7
+
+### Fixed
+
+- Commit Typo
+
 ## Version 0.0.6
 
 ### Added

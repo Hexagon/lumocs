@@ -122,7 +122,6 @@ aside nav {
 }
 aside .level0 {
     padding-left: 0rem;
-    font-weight: bold;
 }
 aside .level2 {
     padding-left: 1rem;
@@ -131,10 +130,18 @@ aside .level3 {
     padding-left: 2rem;
     font-size: 0.95rem;
 }
+aside i {
+    padding-left: 0.3rem;
+    font-size: 0.8rem;
+}
 
 
 /* Alignment */
 .right {
     float: right;
     text-align: right;
+}
+
+.bold {
+    font-weight: bold;
 }
