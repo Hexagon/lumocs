@@ -10,10 +10,12 @@ specifically for the Lume static site generator. Lumocs places your content
 front and center, ensuring a smooth and accessible experience for your users /
 readers.
 
+**Fun Fact**: This documentation is built by Lumocs itself.
+
 ## Demo Folder
 
 For those who prefer a hands-on approach or want a quick start, check out the
-[`demo` folder](https://github.com/hexagon/lumocs/tree/main/demo) in the Lumocs
+[`demo` folder](https://github.com/hexagon/lumocs/tree/main/demo-repository) in the Lumocs
 repository on GitHub. It contains a ready-made setup that showcases the
 capabilities of Lumocs. Simply clone and run!
 
