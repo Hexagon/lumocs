@@ -13,16 +13,20 @@ title: hexagon.56k.guru
     <meta name="color-scheme" content="light dark">
     <link rel="canonical" href="{{ page.data.url | url(true) }}" />
 
-    <!-- Pico CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-
     <!-- Specific -->
     <title>{{ title }}</title>
  
-    <link href="{{ basePath }}/css/style.css" rel="stylesheet" inline>
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="/css/pico.min.css" inline>
 
+    <!-- GitHub Dark Hightlight.js Theme -->
+    <link href="/css/github-dark.min.css" rel="stylesheet">
+
+    <!-- Local CSS -->
+    <link href="/css/style.css" rel="stylesheet" inline>
+    
     <!-- Theme switcher -->
-    <script src="{{ basePath }}/js/theme-switcher.js"></script>
+    <script src="/js/theme-switcher.js" async></script>
     
     <!-- Overridable custom content -->
     {% include "head.njk" %}

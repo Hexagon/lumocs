@@ -3,14 +3,14 @@ layout: layout/body.njk
 ---
 <div class="grid">
 
+  <!-- Sidebar -->
+  <aside>
+    {% include "partials/sidebar.njk" %}
+  </aside>
+
   <section>
       {% include "components/search.njk" %}
       {{ content | safe }}
   </section>
   
-  <!-- Sidebar -->
-  <aside class="col-md-3">
-    {% include "partials/sidebar.njk" %}
-  </aside>
-
 </div>

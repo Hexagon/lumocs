@@ -1,8 +1,3 @@
-Got it. Let's incorporate this information:
-
----
-
-````
 ---
 title: "Hierarchical Structuring"
 parent: "Usage"

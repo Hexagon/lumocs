@@ -1,9 +1,23 @@
 <nav>
     <ul>
         {% for navPage in search.pages("layout=page.njk","nav_order=asc") %}
-            <li>
-                <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
-            </li>
+            {% if not navPage.data.parent %}
+                <li class="level0">
+                    <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
+                </li>
+                {% set searchParam1 = ["parent=", navPage.data.title] | join %}
+                {% for subPage1 in search.pages(searchParam1,"nav_order=asc") %}
+                    <li class="level1">
+                        <a href="{{ subPage1.data.url }}">{{ subPage1.data.title }}</a>
+                    </li>
+                    {% set searchParam2 = ["parent=", subPage1.data.title] | join %}
+                    {% for subPage2 in search.pages(searchParam2,"nav_order=asc") %}
+                        <li class="level2">
+                            <a href="{{ subPage2.data.url }}">{{ subPage2.data.title }}</a>
+                        </li>
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
         {% endfor %}
     </ul>
 </nav>
