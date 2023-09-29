@@ -49,7 +49,7 @@ currently `1.19.0`.
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v1.19.0/",
-    "lumocs/": "https://deno.land/x/lumocs@0.0.4/"
+    "lumocs/": "https://deno.land/x/lumocs@0.0.5/"
   }
 }
 ```
