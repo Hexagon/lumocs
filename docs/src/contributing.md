@@ -16,15 +16,15 @@ to Lumocs.
    [fork the Lumocs repository](https://github.com/hexagon/lumocs/fork).
 
 2. **Clone Your Fork**:
-   ```
-   git clone https://github.com/YOUR_USERNAME/lumocs.git
-   cd lumocs
-   ```
+```bash
+git clone https://github.com/YOUR_USERNAME/lumocs.git
+cd lumocs
+```
 
 3. **Create a New Branch**: Create a branch for your feature or bugfix.
-   ```
-   git checkout -b feature/your-feature-name
-   ```
+```bash
+git checkout -b feature/your-feature-name
+```
 
 ## Contribution Best Practices
 
@@ -48,9 +48,9 @@ to Lumocs.
 ## Submitting Your Changes
 
 1. **Push to Your Fork**:
-   ```
-   git push origin feature/your-feature-name
-   ```
+```bash
+git push origin feature/your-feature-name
+```
 
 2. **Submit a Pull Request**: Navigate to the Lumocs repository and click on
    "New Pull Request". Select your fork and the branch you just pushed to.

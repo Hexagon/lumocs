@@ -4,7 +4,7 @@ parent: "Usage"
 nav_order: 2
 ---
 
-## Creating Pages
+# Creating Pages
 
 To ensure that Lumocs correctly processes and displays your content, save your
 Markdown files with the `.md` extension and place them in the `/docs/src`
@@ -90,16 +90,8 @@ Here's a simple footnote[^1]. ... [^1]: This is the footnote.
 
 ### Embedding Code
 
-You can also embed code snippets:
-
-```javascript
-const greet = () => {
-  console.log("Hello, Lumocs!");
-};
-```
-
 To display code blocks in the actual output, ensure you use three backticks
-(\```) to start and end your code.
+(\`\`\`) to start and end your code.
 
 ### Further Reading
 

@@ -6,5 +6,26 @@
     "site": "Lumocs Documentation",
     "lang": "en",
     "description": "=description"
-  }
+  },"topLinks": [
+    {
+      "icon":"fab fa-github",
+      "title": "GitHub Repsitory",
+      "url":"https://github.com/hexagon/lumocs"
+    },
+    {
+      "icon":"fas fa-cube",
+      "title": "Deno.land/x",
+      "url":"https://deno.land/x/lumocs"
+    }
+  ],
+  "navLinks": [
+    {
+      "title": "GitHub Repsitory",
+      "url":"https://github.com/hexagon/lumocs"
+    },
+    {
+      "title": "Deno.land/x",
+      "url":"https://deno.land/x/lumocs"
+    }
+  ]
 }

@@ -15,6 +15,7 @@ understand the changes at a glance.
 
 - Page hierarchy
 - New customization options in `_includes` directory.
+- Support for `topLinks` and `navLinks` in `_data.yml`
 
 ---
 

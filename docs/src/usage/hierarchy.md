@@ -60,7 +60,7 @@ file structure:
 
 Here's an example showing a two-level hierarchy:
 
-```
+```bash
 /docs/src/
 |-- Getting Started.md
 |-- Getting Started/
@@ -90,8 +90,3 @@ usability of your documentation. Use the hierarchical capabilities and
 recommended file structure wisely to create a seamless experience for your
 readers.
 
-```
----
-
-This provides a clear overview of the hierarchical structuring in Lumocs, along with a recommended file structure and an example hierarchy.
-```
