@@ -3,7 +3,7 @@ import lumocs from "lumocs/mod.ts";
 
 const site = lume({
   src: "src",
-  location: new URL("https://hexagon.github.io/lumocs/"),
+  location: new URL("https://lumocs.56k.guru"),
 });
 
 site.use(lumocs());
