@@ -1,9 +1,7 @@
-Here's your content with the appropriate links to the `hexagon/lumocs`
-repository on GitHub:
-
 ---
-
-## title: "Overview" nav_order: 1
+title: "Overview"
+nav_order: 1
+---
 
 # Lumocs: A Documentation Theme for Lume
 

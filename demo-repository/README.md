@@ -36,8 +36,3 @@ for guidelines.
 ## License
 
 Like the main Lumocs theme, this demo repository is under the MIT License.
-
----
-
-You might want to adjust specific instructions or paths depending on the exact
-setup of your repository.

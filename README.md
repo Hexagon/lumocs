@@ -29,8 +29,3 @@ for Jekyll. Dive deeper into the
 ## License
 
 Lumocs is available under the MIT License.
-
----
-
-This version emphasizes clarity and maintains a consistent tone throughout the
-README.
