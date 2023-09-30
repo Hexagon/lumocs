@@ -16,6 +16,7 @@ understand the changes at a glance.
 - Upgrade Lume `1.19.0` -> `1.19.1`
 - Style fixes
 - Change title from `title` to `page.metas.site - title`
+- Fix menu indentation
 
 ## Version 0.0.9
 
