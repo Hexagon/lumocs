@@ -14,6 +14,7 @@ export default function (options: Partial<Options> = {}) {
       // Static content
       "css/style.css",
       "js/theme-switcher.js",
+      "js/hamburger.js",
 
       // Overridable
       "_includes/footer.njk",

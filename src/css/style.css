@@ -7,22 +7,18 @@
     --badge-background: #CCC;
     --badge-color-alt: #333;
     --badge-background-alt: rgb(8, 211, 247);
-    --header-border-color: rgb(228,229,231);
-    --footer-background-color: none;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        --header-border-color: rgb(42, 44, 45);
-        --footer-background-color: rgb(12, 18, 22);
-    }
+    --alt-background-color: rgb(12, 18, 22);
+    --alt-border-color: rgb(22, 28, 32);
 }
 
 [data-theme="dark"] {
-    --header-border-color: rgb(42, 44, 45);
-    --footer-background-color: rgb(12, 18, 22);
+    --alt-background-color: rgb(12, 18, 22);
+    --alt-border-color: rgb(22, 28, 32);
 }
-
+[data-theme="light"] {
+    --alt-background-color: rgb(240, 250, 260);
+    --alt-border-color: rgb(230, 240, 250);
+}
 /* Reset Pico CSS Responsive padding */
 body > header, body > footer, body > main {
     padding: 0;
@@ -53,6 +49,23 @@ h1,h2,h3,h4,h5,h6 {
     main .grid {
         grid-template-columns: 20% auto;
     }
+    #hamburger-btn {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    aside {
+        display: none;
+        width: 100%;
+    }
+    #hamburger-btn {
+        display: block; 
+    }
+}
+
+
+#hamburger-btn {
+    padding: 0px;
 }
 
 /* Highlightjs Customization */
@@ -62,13 +75,13 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Header */
 header {
-    border-bottom: 1px solid;
-    border-color: var(--header-border-color);
+    background-color: var(--alt-background-color);
+    border-bottom: 1px solid var(--alt-border-color);
     margin-bottom: 2rem;
 }
 header nav {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
 }
 #theme-switcher {
     cursor: pointer;
@@ -93,10 +106,9 @@ main.container {
 
 /* Footer */
 footer{
-    border-top: 1px solid var(--header-border-color);
-    background-color: var(--footer-background-color);
+    background-color: var(--alt-background-color);
+    border-top: 1px solid var(--alt-border-color);
     margin-top: 3rem;
-
 }
 footer .grid {
     padding-top: 1.5rem;
@@ -121,7 +133,7 @@ aside nav {
     margin-bottom: 18px;
 }
 aside .level0 {
-    padding-left: 0rem;
+    padding-left: 7.5px;
 }
 aside .level2 {
     padding-left: 1rem;

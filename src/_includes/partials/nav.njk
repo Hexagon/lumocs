@@ -1,13 +1,27 @@
 <nav>
   <ul>
+
+    <!-- Hamburger Icon -->
+    <li id="hamburger-btn">
+      <button>
+        <i class="fas fa-bars"></i>
+      </button>
+    </li>
+
+    <!-- Brand Name -->
     <li>
       <a class="navbar-brand" href="/">
         {{ metas.site }}
       </a>
     </li>
+
   </ul>
   <ul>
+
+    <!-- Light/Dark Theme Selector -->
     <li><span id="theme-switcher"><i id="theme-icon" class="fas fa-moon"></i></span></li>
+
+    <!-- Aux Top Links -->
     {% for link in topLinks %}
       <li>
         <a href="{{ link.url }}" title="{{ link.title }}" title="{{ link.title }}">
