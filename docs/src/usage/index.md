@@ -37,7 +37,7 @@ subdirectory like GitHub Pages' default address.
 
 ### 2. Deno Tasks (`deno.json`)
 
-Ensure compatibility between Lumocs and the Lume version, currently `1.19.0`:
+Ensure compatibility between Lumocs and the Lume version, currently `1.19.1`:
 
 ```json
 {
@@ -47,8 +47,8 @@ Ensure compatibility between Lumocs and the Lume version, currently `1.19.0`:
     "serve": "deno task lume -s --port=8000"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.19.0/",
-    "lumocs/": "https://deno.land/x/lumocs@0.0.7/"
+    "lume/": "https://deno.land/x/lume@v1.19.1/",
+    "lumocs/": "https://deno.land/x/lumocs@0.0.10/"
   }
 }
 ```

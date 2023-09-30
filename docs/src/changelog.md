@@ -9,6 +9,20 @@ This page documents all the changes, updates, and improvements made to the
 project over time. It's a great way to keep track of the project's evolution and
 understand the changes at a glance.
 
+## Version 0.0.10
+
+### Fixed
+
+- Upgrade Lume `1.19.0` -> `1.19.1`
+- Style fixes
+- Change title from `title` to `page.metas.site - title`
+
+## Version 0.0.9
+
+### Fixed
+
+- Added hamburger menu, take 2
+
 ## Version 0.0.8
 
 ### Fixed
