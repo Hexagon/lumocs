@@ -5,7 +5,8 @@ nav_order: 1
 
 # Lumocs: A Documentation Theme for Lume
 
-Welcome to Lumocs — an elegant and intuitive documentation theme for the Lume static site generator.
+Welcome to Lumocs — an elegant and intuitive documentation theme for the Lume
+static site generator.
 
 **Fun Fact**: This documentation is built by Lumocs itself.
 
@@ -30,8 +31,11 @@ Welcome to Lumocs — an elegant and intuitive documentation theme for the Lume 
 ## Demo Folder
 
 For those who prefer a hands-on approach or want a quick start, check out the
-[`demo` folder](https://github.com/hexagon/lumocs/tree/main/demo-repository) in the Lumocs
-repository on GitHub. It contains a ready-made setup that showcases how to integrate Lumocs in the `/docs` subfolder of an existing project repository. It also contains an example GitHub Workflow for automatic deploy to GitHub Pages.
+[`demo` folder](https://github.com/hexagon/lumocs/tree/main/demo-repository) in
+the Lumocs repository on GitHub. It contains a ready-made setup that showcases
+how to integrate Lumocs in the `/docs` subfolder of an existing project
+repository. It also contains an example GitHub Workflow for automatic deploy to
+GitHub Pages.
 
 ## GitHub Pages Deployment
 

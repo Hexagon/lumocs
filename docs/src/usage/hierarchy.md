@@ -46,19 +46,19 @@ nav_order: 1
 For easier maintenance and organization, it's beneficial to follow a recommended
 file structure:
 
-1. **First Level Pages:** These can either be saved as `index.md` within their
-   respective directories or with their title as the filename directly under
-   `/docs/src/`.
+1. **First Level Pages:** These can either be saved with their title as the
+   filename directly under `/docs/src/`, or if you intend to have a sub-level
+   under this page, be saved as `index.md` within their respective directories.
 
-   - `/docs/src/Getting Started.md`
-   - OR `/docs/src/Getting Started/index.md`
+   - `/docs/src/getting-started.md`
+   - OR `/docs/src/getting-started/index.md`
 
 2. **Second Level Pages:** Create a subdirectory within the first-level
    directory, named after the first-level topic. Save the second-level pages as
    separate `.md` files within these subdirectories.
 
-   - `/docs/src/Getting Started/Installation.md`
-   - `/docs/src/Getting Started/Configuration.md`
+   - `/docs/src/getting-started/installation.md`
+   - `/docs/src/getting-started/configuration.md`
 
 ### Example File/Folder Hierarchy:
 
@@ -66,21 +66,25 @@ Here's an example showing a two-level hierarchy:
 
 ```bash
 /docs/src/
-|-- Getting Started.md
-|-- Getting Started/
-|   |-- Installation.md
-|   |-- Configuration.md
-|-- Usage.md
-|-- Usage/
-|   |-- Hierarchical Structuring.md
-|   |-- Another Subtopic.md
+|-- index.md
+|-- contributing.md
+|-- getting-started/
+|   |-- index.md
+|   |-- installation.md
+|   |-- configuration.md
+|-- usage/
+|   |-- index.md
+|   |-- hierarchical-structure.md
+|   |-- another-subtopic.md
 ```
 
 In this structure:
 
-- "Getting Started" and "Usage" are first-level pages.
-- "Installation", "Configuration", and "Hierarchical Structuring" are
-  second-level pages under their respective parent topics.
+- `index.md` and `contributing.md` are first-level pages without children.
+- `getting-started/index.md` and `usage/index.md` are first-level pages with
+  children.
+- `getting-started/installation.md`, `getting-started/configuration.md` etc. are
+  second-level pages.
 
 ### Considerations
 
