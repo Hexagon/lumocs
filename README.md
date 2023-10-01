@@ -1,7 +1,3 @@
-Certainly! Here's a streamlined version of your repository's readme:
-
----
-
 # Lumocs: A Documentation Theme for Lume
 
 Lumocs offers a sleek documentation theme for Lume, similar to "just-the-docs" for Jekyll. Explore the full details in the [Lumocs Documentation](https://lumocs.56k.guru).
