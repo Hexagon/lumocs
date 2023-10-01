@@ -11,14 +11,17 @@ understand the changes at a glance.
 
 ## Version 0.0.11
 
+### Added
+
+- Automatic breadcrumbs
+- Sticky footer for consistent footer visibility
+- Showcase `topLinks` and `navLinks` in the demo-repository
+- Demonstrated hierarchy in the demo-repositor
+
 ### Fixed
 
-- Sticky footer
-- Adjusted light theme colors
-- Stylesheet cleanup
-- Added `topLinks` and `navLinks` to demo-repository
-- Showcase hierarchy in demo-repository
-- Added breadcrumbs
+- Resolved a bug related to spaces in page titles
+- Fine-tuned the light theme's color palette for better aesthetics
 
 ## Version 0.0.10
 

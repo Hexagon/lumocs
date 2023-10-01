@@ -1,6 +1,6 @@
 ---
 title: "Hierarchical Structuring"
-parent: "Usage"
+parent: "Getting Started"
 nav_order: 3
 ---
 

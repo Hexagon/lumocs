@@ -1,6 +1,6 @@
 ---
 title: "Site Configuration"
-parent: "Usage"
+parent: "Getting Started"
 nav_order: 5
 ---
 
