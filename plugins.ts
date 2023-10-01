@@ -4,7 +4,7 @@ import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import metas from "lume/plugins/metas.ts";
-//import pagefind, { Options as PagefindOptions } from "lume/plugins/pagefind.ts";
+import pagefind, { Options as PagefindOptions } from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import readingInfo from "lume/plugins/reading_info.ts";
 import type { Page, Site } from "lume/core.ts";
@@ -47,7 +47,7 @@ export default function (options: Options = {}) {
       )
       .use(resolveUrls())
       .use(slugifyUrls())
-      //.use(pagefind(options.pagefind))
+      .use(pagefind(options.pagefind))
       .use(sitemap({
         priority: "priority",
       }));

@@ -5,12 +5,7 @@ nav_order: 1
 
 # Lumocs: A Documentation Theme for Lume
 
-Welcome to Lumocs — an elegant and intuitive documentation theme for the Lume
-static site generator.
-
-**Fun Fact**: This documentation is built by Lumocs itself.
-
-## Features
+**Features**
 
 - **Elegant Design**: A clean and professional look suitable for documentation.
 - **Hierarchical Navigation**: Supports up to three levels of content hierarchy
@@ -18,13 +13,10 @@ static site generator.
 - **Responsive**: Fully mobile-friendly and adapts to various screen sizes.
 - **Customizable**: Easily tailor the look and feel through `_data.json` and
   `_includes` directory.
-- **Integrated Search**: Quick and efficient content search capability.
 - **Dark Mode**: Built-in theme switcher for light and dark mode preferences.
 - **Markdown Enhanced**: Supports `markdown-it` syntax for rich content
   creation.
-- **Fast Performance**: Optimized for speed and efficiency.
-- **Using Modern Tools**: Utilizes Deno and Lume, to reduce bloat and working
-  efficiently.
+- **Efficient**: Optimized for speed and efficiency.
 - **Ready for GitHub Pages**: Automatically build and deploy the site on pushing
   to your repository.
 

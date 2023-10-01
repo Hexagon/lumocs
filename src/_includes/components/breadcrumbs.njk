@@ -1,0 +1,64 @@
+{% set currentUrl = page.data.url %}
+{% set breadcrumbs = [] %}
+{% set found = false %}
+
+<!-- Find the Current Page in Hierarchy -->
+{% for navPage in search.pages("layout=page.njk", "nav_order=asc") if not found %}
+    {% set searchParam1 = ["parent=", navPage.data.title] | join %}
+    {% for subPage1 in search.pages(searchParam1, "nav_order=asc") if not found %}
+        {% set searchParam2 = ["parent=", subPage1.data.title] | join %}
+        {% for subPage2 in search.pages(searchParam2, "nav_order=asc") if not found %}
+            {% if subPage2.data.url == currentUrl %}
+                {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}, {'title': subPage1.data.title, 'url': subPage1.data.url}, {'title': subPage2.data.title, 'url': subPage2.data.url}] %}
+                {% set found = true %}
+            {% endif %}
+        {% endfor %}
+        {% if not found and subPage1.data.url == currentUrl %}
+            {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}, {'title': subPage1.data.title, 'url': subPage1.data.url}] %}
+            {% set found = true %}
+        {% endif %}
+    {% endfor %}
+    {% if not found and navPage.data.url == currentUrl %}
+        {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}] %}
+        {% set found = true %}
+    {% endif %}
+{% endfor %}
+
+{% set currentUrl = page.data.url %}
+{% set breadcrumbs = [] %}
+{% set found = false %}
+
+<!-- Find the Current Page in Hierarchy -->
+{% for navPage in search.pages("layout=page.njk", "nav_order=asc") if not found %}
+    {% set searchParam1 = ["parent=", navPage.data.title] | join %}
+    {% for subPage1 in search.pages(searchParam1, "nav_order=asc") if not found %}
+        {% set searchParam2 = ["parent=", subPage1.data.title] | join %}
+        {% for subPage2 in search.pages(searchParam2, "nav_order=asc") if not found %}
+            {% if subPage2.data.url == currentUrl %}
+                {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}, {'title': subPage1.data.title, 'url': subPage1.data.url}, {'title': subPage2.data.title, 'url': subPage2.data.url}] %}
+                {% set found = true %}
+            {% endif %}
+        {% endfor %}
+        {% if not found and subPage1.data.url == currentUrl %}
+            {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}, {'title': subPage1.data.title, 'url': subPage1.data.url}] %}
+            {% set found = true %}
+        {% endif %}
+    {% endfor %}
+    {% if not found and navPage.data.url == currentUrl %}
+        {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}] %}
+        {% set found = true %}
+    {% endif %}
+{% endfor %}
+
+<!-- Display the Breadcrumbs -->
+{% if breadcrumbs|length > 1 %}
+    <div class="breadcrumbs">
+        {% for crumb in breadcrumbs %}
+            {% if loop.last %}
+                {{ crumb.title }}
+            {% else %}
+                <a href="{{ crumb.url }}">{{ crumb.title }}</a> &gt;
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

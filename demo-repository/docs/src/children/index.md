@@ -1,9 +1,9 @@
 ---
-title: "Additional Page"
+title: "Parent"
 nav_order: 2
 ---
 
-# Additional Page
+# Parent Page
 
 ---
 

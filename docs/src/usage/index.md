@@ -48,7 +48,7 @@ Ensure compatibility between Lumocs and the Lume version, currently `1.19.1`:
   },
   "imports": {
     "lume/": "https://deno.land/x/lume@v1.19.1/",
-    "lumocs/": "https://deno.land/x/lumocs@0.0.10/"
+    "lumocs/": "https://deno.land/x/lumocs@0.0.11/"
   }
 }
 ```

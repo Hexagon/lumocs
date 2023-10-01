@@ -3,8 +3,30 @@
   "layout": "page.njk",
   "metas": {
     "title": "=title",
-    "site": "Site Header",
+    "site": "Site Name",
     "lang": "en",
     "description": "=description"
-  }
+  },
+  "topLinks": [
+    {
+      "icon": "fab fa-github",
+      "title": "GitHub Repsitory",
+      "url": "https://github.com/hexagon/lumocs"
+    },
+    {
+      "icon": "fab fa-npm",
+      "title": "NPM Library",
+      "url": "https://npmjs.com"
+    }
+  ],
+  "navLinks": [
+    {
+      "title": "GitHub Repsitory",
+      "url": "https://github.com/hexagon/lumocs"
+    },
+    {
+      "title": "NPM Library",
+      "url": "https://npmjs.com"
+    }
+  ]
 }
