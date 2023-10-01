@@ -22,7 +22,8 @@ Lumocs offers a sleek documentation theme for Lume, similar to "just-the-docs" f
 - Familiarize yourself with the required configurations in the provided [demo-repository](./demo-repository). This includes the `_config.ts`, `_data.json`, `deno.json`, and sample Markdown content like `index.md`.
   
 ## Build Command
-- Use `deno task lume` to compile your site.
+
+- Use `deno task serve` to start a local development server, or `deno task lume` to compile your site to the `_site` subfolder.
 
 ## More Details & Deployment
 
