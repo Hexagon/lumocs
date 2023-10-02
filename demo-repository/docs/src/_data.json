@@ -7,7 +7,7 @@
     "lang": "en",
     "description": "=description"
   },
-  "topLinks": [
+  "top_links": [
     {
       "icon": "fab fa-github",
       "title": "GitHub Repsitory",
@@ -19,7 +19,7 @@
       "url": "https://npmjs.com"
     }
   ],
-  "navLinks": [
+  "nav_links": [
     {
       "title": "GitHub Repsitory",
       "url": "https://github.com/hexagon/lumocs"

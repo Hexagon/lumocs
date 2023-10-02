@@ -4,14 +4,14 @@ parent: "Getting Started"
 nav_order: 3
 ---
 
-## Hierarchical Structuring in Lumocs
+# Hierarchical Structoring
 
 In Lumocs, the hierarchical structure of your documentation is determined using
 the `title` and `parent` front-matter in your Markdown files. This allows for
 the creation of a structured navigation sidebar and organized content
 presentation.
 
-### First Level: Main Sections
+## First Level: Main Sections
 
 The first level typically consists of main sections or categories. These are
 top-level items that act as general buckets or categories for your content.
@@ -25,7 +25,7 @@ nav_order: 1
 ---
 ```
 
-### Second Level: Subsections
+## Second Level: Subsections
 
 The second level includes subsections or specific topics under the main
 sections. To define a second-level item, you need to specify the `parent`
@@ -41,7 +41,7 @@ nav_order: 1
 ---
 ```
 
-### Recommended File Structure
+## Recommended File Structure
 
 For easier maintenance and organization, it's beneficial to follow a recommended
 file structure:
@@ -86,7 +86,7 @@ In this structure:
 - `getting-started/installation.md`, `getting-started/configuration.md` etc. are
   second-level pages.
 
-### Considerations
+## Considerations
 
 - Ensure that the `nav_order` is set appropriately to define the order of
   appearance in the navigation sidebar.

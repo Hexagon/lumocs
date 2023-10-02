@@ -23,6 +23,7 @@ export default function (options: Partial<Options> = {}) {
 
       // Internal
       "_includes/components/search.njk",
+      "_includes/components/toc.njk",
       "_includes/components/breadcrumbs.njk",
       "_includes/layout/body.njk",
       "_includes/layout/html.njk",

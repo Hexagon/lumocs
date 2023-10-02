@@ -2,12 +2,14 @@
   "lang": "en",
   "priority": 1.0,
   "layout": "page.njk",
+
   "metas": {
     "title": "=title",
     "site": "Site Header",
     "lang": "en",
     "description": "=description"
   },
-  "topLinks": [],
-  "navLinks": []
+
+  "top_links": [],
+  "nav_links": []
 }

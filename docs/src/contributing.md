@@ -3,12 +3,16 @@ title: "Contributing"
 nav_order: 4
 ---
 
-# Contribution Guidelines for Lumocs
+# Contributing to Lumocs
 
 Thank you for considering contributing to Lumocs! We value and appreciate your
 help, whether it's through bug reports, feature suggestions, or pull requests.
 This document outlines the standards and guidelines to follow when contributing
 to Lumocs.
+
+{:toc}
+toc
+<!-- toc -->
 
 ## Getting Started
 

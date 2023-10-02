@@ -4,8 +4,6 @@ parent: "Getting Started"
 nav_order: 2
 ---
 
-# Creating Pages
-
 To ensure that Lumocs correctly processes and displays your content, save your
 Markdown files with the `.md` extension and place them in the `/docs/src`
 directory.

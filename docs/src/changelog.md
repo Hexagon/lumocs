@@ -15,7 +15,7 @@ understand the changes at a glance.
 
 - Automatic breadcrumbs
 - Sticky footer for consistent footer visibility
-- Showcase `topLinks` and `navLinks` in the demo-repository
+- Showcase `top_links` and `nav_links` in the demo-repository
 - Demonstrated hierarchy in the demo-repositor
 
 ### Fixed
@@ -56,7 +56,7 @@ understand the changes at a glance.
 
 - Page hierarchy
 - New customization options in `_includes` directory.
-- Support for `topLinks` and `navLinks` in `_data.yml`
+- Support for `top_links` and `nav_links` in `_data.yml`
 
 ---
 
