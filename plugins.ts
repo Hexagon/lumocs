@@ -10,6 +10,8 @@ import readingInfo from "lume/plugins/reading_info.ts";
 import type { Page, Site } from "lume/core.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
 
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.1/toc.ts";
+
 import lang_javascript from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/javascript.min.js";
 import lang_bash from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/bash.min.js";
 import lang_xml from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/xml.min.js";
@@ -17,18 +19,32 @@ import lang_json from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/langu
 import lang_yaml from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/yaml.min.js";
 import lang_markdown from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/markdown.min.js";
 
+import { renderTOC } from "./toc.ts";
+
 export interface Options {
   prism?: Partial<PrismOptions>;
   date?: Partial<DateOptions>;
-  //pagefind?: Partial<PagefindOptions>;
+  pagefind?: Partial<PagefindOptions>;
 }
 
 /** Configure the site */
 export default function (options: Options = {}) {
   return (site: Site) => {
+    site;
+
+    // Set variables
     site
+      .data("lang", "en")
+      .data("priority", 1.0)
+      .data("layout", "page.njk")
+      .data("metas.title", "=title")
+      .data("metas.lang", "=lang")
+      .data("metas.description", "=description")
+      .data("top_links", [])
+      .data("nav_links", [])
       .use(basePath())
       .use(prism(options.prism))
+      .use(toc())
       .use(readingInfo())
       .use(date(options.date))
       .use(metas())
@@ -42,6 +58,8 @@ export default function (options: Options = {}) {
             json: lang_json,
             yaml: lang_yaml,
             lang_markdown: lang_markdown,
+            // deno-lint-ignore no-explicit-any
+            none: (a: any) => a,
           },
         }),
       )
@@ -61,6 +79,25 @@ export default function (options: Options = {}) {
       "css/github-dark.min.css",
       "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github-dark.min.css",
     );
+
+    site.process([".md"], (page: Page) => {
+      if (page.data.toc && page.data.toc.length) {
+        const tocPlaceholderRegex = /<!--\s*toc\s*-->/i;
+        if (tocPlaceholderRegex.test(page.content as string)) {
+          const tocHtml = renderTOC(page.data.toc);
+          page.content = (page.content as string).replace(tocPlaceholderRegex, tocHtml);
+        }
+      }
+    });
+
+    // Substitution feature
+    site.process([".md"], (page: Page) => {
+      for (const obj of Object.entries(page.data.substitute)) {
+        const key = obj[0],
+          value = obj[1];
+        page.content = (page.content as string).replaceAll(key, value as string);
+      }
+    });
 
     // Copy files
     site

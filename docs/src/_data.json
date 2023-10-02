@@ -1,13 +1,17 @@
 {
-  "lang": "en",
-  "layout": "page.njk",
   "metas": {
-    "title": "=title",
     "site": "Lumocs Documentation",
-    "lang": "en",
-    "description": "=description"
+    "title": "=title",
+    "description": "=description",
+    "lang": "=lang"
   },
-  "topLinks": [
+
+  "substitute": {
+    "$LUMOCS_VERSION": "0.0.12",
+    "$LUME_VERSION": "v1.19.1"
+  },
+
+  "top_links": [
     {
       "icon": "fab fa-github",
       "title": "GitHub Repsitory",
@@ -19,7 +23,8 @@
       "url": "https://deno.land/x/lumocs"
     }
   ],
-  "navLinks": [
+
+  "nav_links": [
     {
       "title": "GitHub Repsitory",
       "url": "https://github.com/hexagon/lumocs"

@@ -4,7 +4,7 @@ parent: "Getting Started"
 nav_order: 5
 ---
 
-# Site Configuration with `_data.json`
+# Site Configuration using `_data.json`
 
 In Lumocs, the `_data.json` file is central to configuring global settings for
 your documentation. It provides a centralized location to define meta tags, set
@@ -31,8 +31,8 @@ The `metas` object allows you to set meta tags for your documentation pages:
 
 ## Top Links
 
-The `topLinks` array is designed to create a list of important links that can be
-displayed at the top of your documentation:
+The `top_links` array is designed to create a list of important links that can
+be displayed at the top of your documentation:
 
 - **icon:** Defines the icon class for the link. It uses the Font Awesome
   classes as a standard.
@@ -42,7 +42,7 @@ displayed at the top of your documentation:
 Example:
 
 ```json
-"topLinks": [
+"top_links": [
     {
       "icon": "fas fa-globe me-2",
       "title": "Web",
@@ -53,7 +53,7 @@ Example:
 
 ## Navigation Links
 
-The `navLinks` array helps you create a list of navigation links. These are
+The `nav_links` array helps you create a list of navigation links. These are
 typically used in sidebars or main menus:
 
 - **title:** The name or label of the navigation item.
@@ -62,7 +62,7 @@ typically used in sidebars or main menus:
 Example:
 
 ```json
-"navLinks": [
+"nav_links": [
     {
       "title": "Web",
       "url": "https://lumocs.56k.guru"

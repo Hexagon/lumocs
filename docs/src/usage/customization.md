@@ -4,7 +4,7 @@ parent: "Getting Started"
 nav_order: 4
 ---
 
-## Customization in Lumocs
+# Customization
 
 Lumocs provides flexibility in customizing various parts of your documentation.
 Whether it's adding extra content between the `<head>` tags, customizing the
