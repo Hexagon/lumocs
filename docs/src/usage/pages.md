@@ -6,7 +6,107 @@ nav_order: 2
 
 To ensure that Lumocs correctly processes and displays your content, save your
 Markdown files with the `.md` extension and place them in the `/docs/src`
-directory.
+directory. Every page consists of "front matter", and markdown, both these
+topics will be covered further down, but let's look at a simple example:
+
+```
+---
+title: "Page Title"
+description: "Page Description"
+nav_order: 1
+---
+
+# Title
+
+Text
+```
+
+**Table of Content**
+
+<!-- TOC -->
+
+### Front Matter
+
+The front matter is the section at the top of every Markdown file, encapsulated
+by `---`, that contains metadata about the page. In Lumocs, the front matter
+allows users to provide specific configurations for individual pages and also
+has the ability to override global settings defined in `_data.json`.
+
+Most of the times, it will looks something like this:
+
+#### Local Variables
+
+These fields are generally specific to individual pages:
+
+- **title**: The main title of the page.
+- **description**: A brief description of the content, often used for SEO
+  purposes.
+- **parent**: Defines the parent of the current page. Learn more about
+  hierarchical structures in Lumocs [here](/usage/hierarchy/).
+- **nav_order**: Determines the order of the page in navigation. The lower the
+  number, the higher up it appears in the list.
+
+#### Global Variables
+
+The following fields can be set globally in `_data.json`, but can be overridden
+in the front matter for specific pages:
+
+- **lang**: Specifies the language of the page content (e.g., "en" for English).
+- **substitute**: Provides page-specific substitution values, specified in YAML.
+
+  ```markdown
+  substitute:
+
+  - $PAGE_VERSION: "2.5.1"
+  ```
+
+- **top_links**: Defines specific links that appear at the top of the page.
+  These are represented as an array of objects.
+
+  ```markdown
+  top_links:
+
+  - title: "Home" url: "/"
+  ```
+
+- **nav_links**: Specifies additional links for the navigation sidebar,
+  represented as an array of objects.
+
+  ```markdown
+  nav_links:
+
+  - title: "Setup Guide" url: "/setup/"
+  - title: "FAQ" url: "/faq/"
+  ```
+
+#### Examples
+
+Here's an example of a page-specific front matter with both local and global
+variables:
+
+```markdown
+---
+title: "Getting Started"
+description: "Introduction to the Lumocs documentation system."
+lang: "fr"
+parent: "Introduction"
+nav_order: 1
+substitute:
+  $PAGE_VERSION: "2.5.1"
+top_links: 
+  - title: "Home"
+    url: "/"
+nav_links:
+  - title: "Setup Guide"
+    url: "/setup/"
+  - title: "FAQ"
+    url: "/faq/"
+---
+```
+
+For more information on the distinction between local and global variables and
+how to utilize global settings effectively, refer to
+[site-wide settings](/usage/site/).
 
 ## Markdown
 
@@ -96,6 +196,49 @@ To display code blocks in the actual output, ensure you use three backticks
 For a comprehensive guide on `markdown-it` syntax, consider visiting the
 [official markdown-it documentation](https://github.com/markdown-it/markdown-it).
 
-Remember to save your Markdown files with the `.md` extension and place them in
-the `/docs/src` directory. Lumocs will then process and convert them into
-beautifully rendered web pages.
+## Special features of Lumocs
+
+### Table of Content
+
+To insert a TOC for the current page, place a HTML-comment with nothing but
+`TOC` inside of it:
+
+```
+<!-- TOC -->
+```
+
+This will generate a complete TOC of the current page
+
+---
+
+### Value Substitution
+
+A unique feature in Lumocs is the ability to perform content substitution
+throughout your documentation. By specifying substitutions in the `_data.json`
+file, you can simplify repetitive content updates, especially handy for global
+parameters like version numbers.
+
+#### How to Use Substitution
+
+1. In your `_data.json` file, define substitutions using the following
+   structure:
+
+```json
+{
+  "substitute": [
+    { "$NAME": "My Application" },
+    { "$VERSION": "1.0.0" }
+    // ... more substitutions
+  ]
+}
+```
+
+2. In your Markdown content, whenever you need to reference the substitution
+   value, use the defined `$NAME`:
+
+```markdown
+Welcome to the documentation of $NAME, version $VERSION.
+```
+
+Upon processing, Lumocs will replace `$NAME` with `My Application` and
+`$VERSION` with `1.0.0` as defined in the `_data.json` file.

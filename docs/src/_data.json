@@ -1,11 +1,14 @@
 {
-  "lang": "en",
-  "priority": 1.0,
-  "layout": "page.njk",
-
   "metas": {
     "site": "Lumocs Documentation",
-    "lang": "en"
+    "title": "=title",
+    "description": "=description",
+    "lang": "=lang"
+  },
+
+  "substitute": {
+    "$LUMOCS_VERSION": "0.0.12",
+    "$LUME_VERSION": "v1.19.1"
   },
 
   "top_links": [

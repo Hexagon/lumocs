@@ -19,10 +19,12 @@ import lang_json from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/langu
 import lang_yaml from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/yaml.min.js";
 import lang_markdown from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/markdown.min.js";
 
+import { renderTOC } from "./toc.ts";
+
 export interface Options {
   prism?: Partial<PrismOptions>;
   date?: Partial<DateOptions>;
-  //pagefind?: Partial<PagefindOptions>;
+  pagefind?: Partial<PagefindOptions>;
 }
 
 
@@ -55,7 +57,18 @@ function renderTOC(toc) {
 /** Configure the site */
 export default function (options: Options = {}) {
   return (site: Site) => {
+    site;
+
+    // Set variables
     site
+      .data("lang", "en")
+      .data("priority", 1.0)
+      .data("layout", "page.njk")
+      .data("metas.title", "=title")
+      .data("metas.lang", "=lang")
+      .data("metas.description", "=description")
+      .data("top_links", [])
+      .data("nav_links", [])
       .use(basePath())
       .use(prism(options.prism))
       .use(toc())
@@ -72,6 +85,8 @@ export default function (options: Options = {}) {
             json: lang_json,
             yaml: lang_yaml,
             lang_markdown: lang_markdown,
+            // deno-lint-ignore no-explicit-any
+            none: (a: any) => a,
           },
         }),
       )
@@ -94,13 +109,21 @@ export default function (options: Options = {}) {
 
     site.process([".md"], (page: Page) => {
       // Replace <!-- toc --> with the actual toc from page.data.toc_string
-      // Replace <!-- toc --> with the generated table of contents
-      if ( page.data.toc && page.data.toc.length) {
-        if (page.data.content.includes("toc")) {
+      if (page.data.toc && page.data.toc.length) {
+        const tocPlaceholderRegex = /<!--\s*toc\s*-->/i;
+        if (tocPlaceholderRegex.test(page.content as string)) {
           const tocHtml = renderTOC(page.data.toc);
-          page.data.content = (page.data.content as string).replace(/toc/i, tocHtml);
-          console.log(page.data.content);  
+          page.content = (page.content as string).replace(tocPlaceholderRegex, tocHtml);
         }
+      }
+    });
+
+    // Substitution feature
+    site.process([".md"], (page: Page) => {
+      for (const obj of Object.entries(page.data.substitute)) {
+        const key = obj[0],
+          value = obj[1];
+        page.content = (page.content as string).replaceAll(key, value as string);
       }
     });
 

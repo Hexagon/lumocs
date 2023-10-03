@@ -10,9 +10,9 @@ help, whether it's through bug reports, feature suggestions, or pull requests.
 This document outlines the standards and guidelines to follow when contributing
 to Lumocs.
 
-{:toc}
-toc
-<!-- toc -->
+**Table of Content**
+
+<!-- TOC -->
 
 ## Getting Started
 

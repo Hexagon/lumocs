@@ -1,15 +1,19 @@
 ---
-title: "Hierarchical Structuring"
+title: "Sidebar Menu"
 parent: "Getting Started"
 nav_order: 3
 ---
 
-# Hierarchical Structoring
+# Sidebar Menu
 
 In Lumocs, the hierarchical structure of your documentation is determined using
 the `title` and `parent` front-matter in your Markdown files. This allows for
 the creation of a structured navigation sidebar and organized content
 presentation.
+
+**Table of Content**
+
+<!-- TOC -->
 
 ## First Level: Main Sections
 
