@@ -24,8 +24,10 @@ policies, or any other pertinent information.
 
 ### Adjusting the Sidebar
 
-To make changes to the sidebar, which might include adding new sections or
-adjusting the layout, modify the `_includes/sidebar.njk` file.
+To add extra content to the sidebar, add the `_includes/sidebar.njk` file.
+
+If you'd like to move the sidebar to the right side of the page, override the
+`layout` key of the front matter or `_data.json` to `page_right.njk`.
 
 ### Advanced Customization: Overriding Templates
 
@@ -40,15 +42,3 @@ you to override templates entirely:
 
 By supplying a modified copy of any of these files in the `_includes` directory,
 Lumocs will prioritize your custom version over the default one.
-
-### Considerations
-
-- Always backup your customizations, especially if you're updating Lumocs. This
-  ensures you don't lose any tailored configurations.
-- Test your documentation thoroughly after making changes to ensure everything
-  is displayed correctly and functions as expected.
-
-Customizing your documentation can greatly enhance the user experience, aligning
-it closer to your brand or specific requirements. Utilize the tools and
-flexibility Lumocs offers to create a unique and functional documentation
-portal.

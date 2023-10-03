@@ -3,6 +3,7 @@ import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
 import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
+import relativeUrls from "lume/plugins/relative_urls.ts";
 import metas from "lume/plugins/metas.ts";
 import pagefind, { Options as PagefindOptions } from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
@@ -12,13 +13,6 @@ import code_highlight from "lume/plugins/code_highlight.ts";
 
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.1/toc.ts";
 
-import lang_javascript from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/javascript.min.js";
-import lang_bash from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/bash.min.js";
-import lang_xml from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/xml.min.js";
-import lang_json from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/json.min.js";
-import lang_yaml from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/yaml.min.js";
-import lang_markdown from "https://unpkg.com/@highlightjs/cdn-assets@11.6.0/es/languages/markdown.min.js";
-
 import { renderTOC } from "./toc.ts";
 
 export interface Options {
@@ -27,29 +21,28 @@ export interface Options {
   pagefind?: Partial<PagefindOptions>;
 }
 
-
 function renderTOC(toc) {
   if (!toc || toc.length === 0) {
-      return '';
+    return "";
   }
 
   let tocHtml = '<ol class="toc">';
 
   for (const item of toc) {
-      tocHtml += `<li><a href="#${item.slug}">${item.text}</a>`;
+    tocHtml += `<li><a href="#${item.slug}">${item.text}</a>`;
 
-      if (item.children && item.children.length > 0) {
-          tocHtml += '<ul>';
-          for (const child of item.children) {
-              tocHtml += `<li><a href="#${child.slug}">${child.text}</a></li>`;
-          }
-          tocHtml += '</ul>';
+    if (item.children && item.children.length > 0) {
+      tocHtml += "<ul>";
+      for (const child of item.children) {
+        tocHtml += `<li><a href="#${child.slug}">${child.text}</a></li>`;
       }
+      tocHtml += "</ul>";
+    }
 
-      tocHtml += '</li>';
+    tocHtml += "</li>";
   }
 
-  tocHtml += '</ol>';
+  tocHtml += "</ol>";
 
   return tocHtml;
 }
@@ -75,22 +68,9 @@ export default function (options: Options = {}) {
       .use(readingInfo())
       .use(date(options.date))
       .use(metas())
-      .use(
-        code_highlight({
-          languages: {
-            javascript: lang_javascript,
-            bash: lang_bash,
-            html: lang_xml,
-            xml: lang_xml,
-            json: lang_json,
-            yaml: lang_yaml,
-            lang_markdown: lang_markdown,
-            // deno-lint-ignore no-explicit-any
-            none: (a: any) => a,
-          },
-        }),
-      )
+      .use(code_highlight())
       .use(resolveUrls())
+      .use(relativeUrls())
       .use(slugifyUrls())
       .use(pagefind(options.pagefind))
       .use(sitemap({
@@ -113,7 +93,10 @@ export default function (options: Options = {}) {
         const tocPlaceholderRegex = /<!--\s*toc\s*-->/i;
         if (tocPlaceholderRegex.test(page.content as string)) {
           const tocHtml = renderTOC(page.data.toc);
-          page.content = (page.content as string).replace(tocPlaceholderRegex, tocHtml);
+          page.content = (page.content as string).replace(
+            tocPlaceholderRegex,
+            tocHtml,
+          );
         }
       }
     });
@@ -123,7 +106,10 @@ export default function (options: Options = {}) {
       for (const obj of Object.entries(page.data.substitute)) {
         const key = obj[0],
           value = obj[1];
-        page.content = (page.content as string).replaceAll(key, value as string);
+        page.content = (page.content as string).replaceAll(
+          key,
+          value as string,
+        );
       }
     });
 

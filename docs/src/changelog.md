@@ -13,6 +13,18 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.13
+
+**Added**
+
+- New option to move the sidebar to the right.
+
+**Fixed**
+
+- Added the `relativeUrls` plugin to enable serving from subdirectories.
+- Removed unnecessary `highlight.js` imports.
+- Added more space under the breadcrumbs.
+
 ## Version 0.0.12
 
 **Added**

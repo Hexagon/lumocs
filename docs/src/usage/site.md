@@ -15,7 +15,8 @@ its various functionalities.
 
 - **lang:** Defines the default language for your documentation. Example:
   `"en"`.
-- **layout:** Specifies the default layout template. Example: `"page.njk"`.
+- **layout:** Specifies the default layout template. Default is `"page.njk"` but
+  can be overridden to `"page_right.njk"` to place the sidebar to the left.
 
 ## Meta Tags Configuration
 
@@ -31,8 +32,8 @@ The `metas` object allows you to set meta tags for your documentation pages:
 
 ## Top Links
 
-The `top_links` array is designed to create a list of important links that can be
-displayed at the top of your documentation:
+The `top_links` array is designed to create a list of important links that can
+be displayed at the top of your documentation:
 
 - **icon:** Defines the icon class for the link. It uses the Font Awesome
   classes as a standard.

@@ -8,9 +8,5 @@
     "exclude": [
       "**/_site"
     ]
-  },
-  "imports": {
-    "lume/": "https://deno.land/x/lume@v1.19.1/",
-    "lumocs/": "./src/"
   }
 }

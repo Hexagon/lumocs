@@ -4,12 +4,14 @@ parent: "Getting Started"
 nav_order: 2
 ---
 
+# Creating Pages
+
 To ensure that Lumocs correctly processes and displays your content, save your
 Markdown files with the `.md` extension and place them in the `/docs/src`
 directory. Every page consists of "front matter", and markdown, both these
 topics will be covered further down, but let's look at a simple example:
 
-```
+```markdown
 ---
 title: "Page Title"
 description: "Page Description"
@@ -188,8 +190,22 @@ Here's a simple footnote[^1]. ... [^1]: This is the footnote.
 
 ### Embedding Code
 
-To display code blocks in the actual output, ensure you use three backticks
-(\`\`\`) to start and end your code.
+When embedding code, specify the language immediately after the opening three
+backticks (\`\`\`). This ensures that the built in library `highlight.js` knows
+which syntax highlighting rules to apply.
+
+For example:
+
+<pre>```typescript
+const greeting = 'Hello, World!';
+console.log(greeting);
+```</pre>
+
+**Supported Languages**:
+
+Lumocs, through `highlight.js`, supports a myriad of programming languages.
+Whether it's JavaScript, Python, C++, or any other popular programming language,
+`highlight.js` has got you covered.
 
 ### Further Reading
 
@@ -203,9 +219,9 @@ For a comprehensive guide on `markdown-it` syntax, consider visiting the
 To insert a TOC for the current page, place a HTML-comment with nothing but
 `TOC` inside of it:
 
-```
-<!-- TOC -->
-```
+<pre>
+&lt;!-- TOC --&gt;
+</pre>
 
 This will generate a complete TOC of the current page
 

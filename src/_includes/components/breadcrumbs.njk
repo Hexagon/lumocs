@@ -3,7 +3,7 @@
 {% set found = false %}
 
 <!-- Find the Current Page in Hierarchy -->
-{% for navPage in search.pages("layout=page.njk", "nav_order=asc") if not found %}
+{% for navPage in search.pages("", "nav_order=asc") if not found %}
     {% set searchParam1 = ["parent='", navPage.data.title, "'"] | join %}
     {% for subPage1 in search.pages(searchParam1, "nav_order=asc") if not found %}
         {% set searchParam2 = ["parent='", subPage1.data.title, "'"] | join %}

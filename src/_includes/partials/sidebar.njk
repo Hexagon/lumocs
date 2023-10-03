@@ -1,7 +1,7 @@
 <nav>
     <ul>
         <!-- Page Hierarchy -->
-        {% for navPage in search.pages("layout=page.njk","nav_order=asc") %}
+        {% for navPage in search.pages("","nav_order=asc") %}
             {% if not navPage.data.parent %}
                 <li class="level0 bold">
                     <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>

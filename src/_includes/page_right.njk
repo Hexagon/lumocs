@@ -1,14 +1,13 @@
 ---
 layout: layout/body.njk
 ---
-<div class="grid"> 
-  <!-- Sidebar -->
-  <aside>
-    {% include "partials/sidebar.njk" %}
-  </aside>
+<div class="grid gridright">
   <section>
     {% include "components/search.njk" %}
     {% include "components/breadcrumbs.njk" %}
     {{ content | safe }}
   </section>
+  <aside>
+    {% include "partials/sidebar.njk" %}
+  </aside>
 </div>
