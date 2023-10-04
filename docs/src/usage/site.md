@@ -1,7 +1,7 @@
 ---
 title: "Site Configuration"
 parent: "Getting Started"
-nav_order: 6
+nav_order: 4
 ---
 
 # Site Configuration using `_data.json`

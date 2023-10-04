@@ -1,7 +1,7 @@
 ---
 title: "Customization"
 parent: "Getting Started"
-nav_order: 4
+nav_order: 3
 ---
 
 # Customization

@@ -1,7 +1,7 @@
 ---
 title: "Creating Pages"
 parent: "Getting Started"
-nav_order: 3
+nav_order: 1
 ---
 
 # Creating Pages

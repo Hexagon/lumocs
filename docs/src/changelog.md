@@ -13,11 +13,19 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.14
+
+**Fixed**
+
+- Fix problem with `nav_order`
+- Fix javascript highlighting (remove prism plugin)
+- Various visual fixes, spacing and margin
+
 ## Version 0.0.13
 
 **Added**
 
-- New option to move the sidebar to the right.
+- New option to move th e sidebar to the right.
 
 **Fixed**
 

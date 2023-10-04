@@ -1,5 +1,4 @@
 import date, { Options as DateOptions } from "lume/plugins/date.ts";
-import prism, { Options as PrismOptions } from "lume/plugins/prism.ts";
 import basePath from "lume/plugins/base_path.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
@@ -7,7 +6,6 @@ import relativeUrls from "lume/plugins/relative_urls.ts";
 import metas from "lume/plugins/metas.ts";
 import pagefind, { Options as PagefindOptions } from "lume/plugins/pagefind.ts";
 import sitemap from "lume/plugins/sitemap.ts";
-import readingInfo from "lume/plugins/reading_info.ts";
 import type { Page, Site } from "lume/core.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
 
@@ -16,7 +14,6 @@ import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.1/toc.ts";
 import { renderTOC } from "./toc.ts";
 
 export interface Options {
-  prism?: Partial<PrismOptions>;
   date?: Partial<DateOptions>;
   pagefind?: Partial<PagefindOptions>;
 }
@@ -62,13 +59,11 @@ export default function (options: Options = {}) {
       .data("metas.description", "=description")
       .data("top_links", [])
       .data("nav_links", [])
+      .use(code_highlight())
       .use(basePath())
-      .use(prism(options.prism))
       .use(toc())
-      .use(readingInfo())
       .use(date(options.date))
       .use(metas())
-      .use(code_highlight())
       .use(resolveUrls())
       .use(relativeUrls())
       .use(slugifyUrls())

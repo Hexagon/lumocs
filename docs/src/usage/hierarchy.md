@@ -1,7 +1,7 @@
 ---
 title: "Sidebar Menu"
 parent: "Getting Started"
-nav_order: 5
+nav_order: 2
 ---
 
 # Sidebar Menu
