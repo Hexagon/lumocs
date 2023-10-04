@@ -205,9 +205,7 @@ console.log(greeting);
 
 **Supported Languages**:
 
-Lumocs, through `highlight.js`, supports a myriad of programming languages.
-Whether it's JavaScript, Python, C++, or any other popular programming language,
-`highlight.js` has got you covered.
+Lumocs supports all languages supported by `highlight.js`.
 
 ### Further Reading
 
@@ -231,10 +229,9 @@ This will generate a complete TOC of the current page
 
 ### Value Substitution
 
-A unique feature in Lumocs is the ability to perform content substitution
-throughout your documentation. By specifying substitutions in the `_data.json`
-file, you can simplify repetitive content updates, especially handy for global
-parameters like version numbers.
+By specifying substitutions in the `_data.json` file, you can simplify
+repetitive content updates, especially handy for global parameters like version
+numbers.
 
 #### How to Use Substitution
 

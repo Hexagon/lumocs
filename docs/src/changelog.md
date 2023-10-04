@@ -13,6 +13,13 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.15
+
+**Fixed**
+
+- Code Cleanup
+- Add Blockquoutes with classes `note`, `warning`, `success` and `error`
+
 ## Version 0.0.14
 
 **Fixed**

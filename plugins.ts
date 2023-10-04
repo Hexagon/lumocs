@@ -18,32 +18,6 @@ export interface Options {
   pagefind?: Partial<PagefindOptions>;
 }
 
-function renderTOC(toc) {
-  if (!toc || toc.length === 0) {
-    return "";
-  }
-
-  let tocHtml = '<ol class="toc">';
-
-  for (const item of toc) {
-    tocHtml += `<li><a href="#${item.slug}">${item.text}</a>`;
-
-    if (item.children && item.children.length > 0) {
-      tocHtml += "<ul>";
-      for (const child of item.children) {
-        tocHtml += `<li><a href="#${child.slug}">${child.text}</a></li>`;
-      }
-      tocHtml += "</ul>";
-    }
-
-    tocHtml += "</li>";
-  }
-
-  tocHtml += "</ol>";
-
-  return tocHtml;
-}
-
 /** Configure the site */
 export default function (options: Options = {}) {
   return (site: Site) => {

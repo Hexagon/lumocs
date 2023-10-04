@@ -49,8 +49,8 @@ site.use(lumocs({
 export default site;
 ```
 
-Remember to specify the `location` option, especially if hosting from a
-subdirectory like GitHub Pages' default address.
+> Remember to specify the `location` option, especially if hosting from a
+> subdirectory like GitHub Pages' default address. { .note }
 
 ### Deno Tasks (`deno.json`)
 
