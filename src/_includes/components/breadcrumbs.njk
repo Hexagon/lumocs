@@ -3,11 +3,11 @@
 {% set found = false %}
 
 <!-- Find the Current Page in Hierarchy -->
-{% for navPage in search.pages("", "nav_order=asc") if not found %}
+{% for navPage in search.pages("!nothing", "nav_order") if not found %}
     {% set searchParam1 = ["parent='", navPage.data.title, "'"] | join %}
-    {% for subPage1 in search.pages(searchParam1, "nav_order=asc") if not found %}
+    {% for subPage1 in search.pages(searchParam1, "nav_order") if not found %}
         {% set searchParam2 = ["parent='", subPage1.data.title, "'"] | join %}
-        {% for subPage2 in search.pages(searchParam2, "nav_order=asc") if not found %}
+        {% for subPage2 in search.pages(searchParam2, "nav_order") if not found %}
             {% if subPage2.data.url == currentUrl %}
                 {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}, {'title': subPage1.data.title, 'url': subPage1.data.url}, {'title': subPage2.data.title, 'url': subPage2.data.url}] %}
                 {% set found = true %}

@@ -5,6 +5,8 @@ nav_order: 2
 
 # Getting started with Lumocs
 
+---
+
 Lumocs requires you to set up at least four files: `_config.ts`, `data.json`,
 `deno.json`, and your main Markdown content file (like `index.md`). Each of
 these plays a critical role in configuring and presenting your content, and they

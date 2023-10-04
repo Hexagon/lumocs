@@ -5,6 +5,8 @@ nav_order: 1
 
 # Lumocs: A Documentation Theme for Lume
 
+---
+
 **Features**
 
 - **Elegant Design**: A clean and professional look suitable for documentation.

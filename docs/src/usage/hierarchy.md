@@ -1,10 +1,12 @@
 ---
 title: "Sidebar Menu"
 parent: "Getting Started"
-nav_order: 3
+nav_order: 5
 ---
 
 # Sidebar Menu
+
+---
 
 In Lumocs, the hierarchical structure of your documentation is determined using
 the `title` and `parent` front-matter in your Markdown files. This allows for

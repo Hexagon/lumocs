@@ -1,10 +1,12 @@
 ---
 title: "Site Configuration"
 parent: "Getting Started"
-nav_order: 5
+nav_order: 6
 ---
 
 # Site Configuration using `_data.json`
+
+---
 
 In Lumocs, the `_data.json` file is central to configuring global settings for
 your documentation. It provides a centralized location to define meta tags, set

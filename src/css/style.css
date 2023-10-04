@@ -32,6 +32,24 @@ body {
 }
 
 /* Pico CSS Overrides */
+.container section > :first-child {
+    margin-top: 0px;
+}
+
+p {
+    margin-top: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-weight: normal;
 }
@@ -101,7 +119,7 @@ aside nav {
     min-height: 100%;
 }
 main {
-    padding-top: 18px;
+    padding-top: 2rem;
 }
 
 /* Footer */
