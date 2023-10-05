@@ -5,51 +5,33 @@ nav_order: 1
 
 # Lumocs: A Documentation Theme for Lume
 
----
+Welcome to Lumocs, a sleek stand-alone documentation theme for Lume, similar to
+"just-the-docs" for Jekyll.
 
-**Features**
+**Why Lumocs?**
 
-- **Elegant Design**: A clean and professional look suitable for documentation.
-- **Hierarchical Navigation**: Supports up to three levels of content hierarchy
-  for organized navigation.
-- **Responsive**: Fully mobile-friendly and adapts to various screen sizes.
-- **Customizable**: Easily tailor the look and feel through `_data.json` and
-  `_includes` directory.
-- **Dark Mode**: Built-in theme switcher for light and dark mode preferences.
-- **Markdown Enhanced**: Supports `markdown-it` syntax for rich content
-  creation.
-- **Efficient**: Optimized for speed and efficiency.
-- **Ready for GitHub Pages**: Automatically build and deploy the site on pushing
-  to your repository.
+- Design and layout **tailored for documentation**.
+- Automatic light/**dark mode** by user preference.
+- **No configuration** needed, **works great and looks great** out of the box.
+- Generates a documentation website from **markdown**-files, using extended
+  `markdown-it` syntax.
+- **Easy to customize** using `_data.json` and the `_includes`-folder.
+- Mobile-**responsive design**.
+- Ready for deployment on **GitHub Pages**.
+- **Hierarchical navigation** with up to three content levels.
+- Built with **modern tools**: Deno and Lume.
 
-## Demo Folder
+Ready to get started? Check out the [Getting Started](./usage/index.md) section
+for step-by-step instructions on generating your documentation site using
+Lumocs.
 
-For those who prefer a hands-on approach or want a quick start, check out the
-[`demo` folder](https://github.com/hexagon/lumocs/tree/main/demo-repository) in
-the Lumocs repository on GitHub. It contains a ready-made setup that showcases
-how to integrate Lumocs in the `/docs` subfolder of an existing project
-repository. It also contains an example GitHub Workflow for automatic deploy to
-GitHub Pages.
+For a hands-on experience, explore the
+[demo-repository folder](https://github.com/hexagon/lumocs/tree/main/demo-repository)
+in the Lumocs GitHub repository. It contains a ready-made setup that
+demonstrates how to integrate Lumocs into the `/docs` subfolder of an existing
+project repository. Additionally, it includes an example GitHub Workflow for
+automatic deployment to [GitHub Pages](./usage/deployment.md).
 
-## GitHub Pages Deployment
-
-There's an example workflow included in the
-[`/demo/.github/workflows/deploy-pages.yml`](https://github.com/hexagon/lumocs/blob/main/demo/.github/workflows/deploy-pages.yml)
-directory of the Lumocs repository. This workflow shows you how to set up GitHub
-Actions to handle the deployment for you.
-
-To utilize this:
-
-1. Copy the `deploy-pages.yml` from the
-   [`/demo/.github/workflows/`](https://github.com/hexagon/lumocs/tree/main/demo/.github/workflows)
-   directory to your project's `.github/workflows/` directory.
-2. In your GitHub repository, navigate to `Settings`.
-3. Under the `Pages` section, set the source to `GitHub Actions`.
-
-This configuration will automatically build and deploy your site to GitHub Pages
-whenever you push to your main branch.
-
-## License
-
-Lumocs is open-source and licensed under the MIT License. This ensures freedom
-to use, modify, and distribute as you see fit, within the terms of the license.
+Whether you're documenting an open-source project, internal tools, or anything
+in between, Lumocs streamlines the process, ensuring your documentation is both
+informative and visually appealing.

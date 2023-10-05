@@ -19,6 +19,7 @@ understand the changes at a glance.
 
 - Code Cleanup
 - Add Blockquoutes with classes `note`, `warning`, `success` and `error`
+- Documentation refactor
 
 ## Version 0.0.14
 

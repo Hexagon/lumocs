@@ -3,123 +3,155 @@ title: "Getting Started"
 nav_order: 2
 ---
 
-# Getting started with Lumocs
+# Getting Started With Lumocs
 
 ---
 
-Lumocs requires you to set up at least four files: `_config.ts`, `data.json`,
-`deno.json`, and your main Markdown content file (like `index.md`). Each of
-these plays a critical role in configuring and presenting your content, and they
-will be detailed in their respective sections.
+To bootstrap a Lumocs site, you'll need to set up three essential files:
+`_config.ts`, `_data.json`, `deno.json`, and add your first content `index.md`.
 
-To bootstrap your site quickly and get it up and running, we'll start with a
-minimum version of each file. For better organization, it's recommended to use
-this file structure:
+It is recommended to organize the files like this:
 
 ```bash
-/                         # Your repository root
-├── /docs                 # The documentation folder
-│   ├── _config.ts        # Lume configuration file
-│   ├── deno.json         # Deno configuration file
-│   └── /src              # Documentation source
-│       ├── _data.json    # Lumocs configuration file
-│       ├── index.md      # Documentation index, will become index.html
-│       └── <other pages  #Documentation index, will become index.html
-├── <other files...>
+/                          # Your repository root
+├── /docs                  # The documentation folder
+│   ├── _config.ts         # Lume configuration file
+│   ├── deno.json          # Deno configuration file
+│   └── /src               # Documentation source
+│       ├── _data.json     # Global variables
+│       ├── index.md       # Documentation index, will become index.html
+│       └── <other pages>  # Documentation other pages
 ```
 
-**Table of Content**
+Everything related to Lumocs is placed in a `/docs` subfolder in this example.
+The actual content and global variables are then placed in another subfolder
+called `/docs/src`.
 
-<!-- TOC -->
+## Prerequisites
 
-### Configuration (`_config.ts`)
+Before we start, make sure that you have Deno (version 1.37 or higher) installed
+on your system. If not, refer to the [official instructions] to install Deno.
 
-Set up Lumocs with Lume:
+## Adding The Essential Files
 
-```typescript
-import lume from "lume/mod.ts";
-import lumocs from "lumocs/mod.ts";
+### `deno.json`
 
-const site = lume();
-
-site.use(lumocs({
-  location: new URL("https://public.url.to/page"),
-}));
-
-export default site;
-```
-
-> Remember to specify the `location` option, especially if hosting from a
-> subdirectory like GitHub Pages' default address. { .note }
-
-### Deno Tasks (`deno.json`)
-
-Ensure compatibility between Lumocs and the Lume version, currently `1.19.1`:
+This file controls which version of Lume and Lumocs should be used, and set up
+the scripts to build your site.
 
 ```json
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
-    "build": "deno task lume",
     "serve": "deno task lume -s --port=8000"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@$LUME_VERSION/",
-    "lumocs/": "https://deno.land/x/lumocs@$LUMOCS_VERSION/"
+    "lume/": "https://deno.land/x/lume@v1.19.1/",
+    "lumocs/": "../"
   }
 }
 ```
 
-### Metadata (`src/_data.json`)
+### `_config.ts`
 
-Define essential metadata, everything but `metas.site` are optional, but it is
-recommended to always transfer the page name, description and language to the
-metadata for SEO purposes:
+The only thing you need to do in this file, is to set the public url of your
+site, to have the sitemap show complete URLs.
+
+Advanced users can activate additional Lume plugins here, more on that later.
+
+```typescript
+import lume from "lume/mod.ts";
+import lumocs from "lumocs/mod.ts";
+
+const siteUrl = "https://url.of.site";
+
+const site = lume({
+  src: "src",
+  location: new URL(siteUrl),
+});
+
+site.use(lumocs());
+
+export default site;
+```
+
+### `src/_data.json`
+
+This can be seen as the global configuration for the site, all parameters in
+this file is used as the default front matter for each generated page.
 
 ```json
 {
+  "lang": "en",
+  "layout": "page.njk",
+
   "metas": {
-    "site": "Site Name",
     "title": "=title",
-    "description": "=description",
-    "lang": "=lang"
-  }
+    "site": "Site Name",
+    "lang": "en",
+    "description": "=description"
+  },
+
+  "top_links": [
+    {
+      "icon": "fab fa-github",
+      "title": "GitHub Repsitory",
+      "url": "https://github.com/hexagon/lumocs"
+    },
+    {
+      "icon": "fab fa-npm",
+      "title": "NPM Library",
+      "url": "https://npmjs.com"
+    }
+  ],
+
+  "nav_links": [
+    {
+      "title": "GitHub Repsitory",
+      "url": "https://github.com/hexagon/lumocs"
+    },
+    {
+      "title": "NPM Library",
+      "url": "https://npmjs.com"
+    }
+  ]
 }
 ```
 
-### Creating Content with Markdown
+### `src/index.md`
 
-Utilize Markdown for your content. Here's a simple `src/index.md`:
+Now you are ready to add content; Add the following markdown, including front
+matter, to `src/index.md`.
 
 ```markdown
 ---
-title: "Overview"
+title: "First Page"
 nav_order: 1
 ---
 
-# Overview
+# First Page
 
----
-
-Your content goes here.
+Hello Lumocs!
 ```
 
 ## Generating Your Site
 
-To compile your site, enter the the documentation root (`/docs` in this
-example), and run:
-
-```bash
-deno task lume
-```
-
-If you have followed the recommended file structure, this command produces the
-output in the `/docs/_site` directory.
-
-To serve your site with hot reload:
+To serve your site with hot reload, navigate to the documentation root (`/docs`
+in this example) and run:
 
 ```bash
 deno task serve
 ```
 
-This will launch a server available at http://localhost:8000
+You can access your live site at http://localhost:8000.
+
+To compile your site, run:
+
+```bash
+deno task lume
+```
+
+This will render the site to a new subfolder to `/docs` called `_site`. The
+`lume` command is useful when you want to deploy your site, and is run
+automatically if you [deploy](./deployment.md) using the supplied GitHub Pages
+workflow.
