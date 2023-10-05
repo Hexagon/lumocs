@@ -169,6 +169,14 @@ aside i {
     font-size: 0.8rem;
 }
 
+aside ul .collapsed ul {
+    display:none;
+}
+
+aside ul i {
+    margin-right: 18px;
+    margin-top: 0.3rem;
+}
 /* Alignment */
 .right {
     float: right;

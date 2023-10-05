@@ -13,6 +13,13 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.16
+
+**Fixed**
+
+- Make sidebar menu entries collapse children by default
+- Add front matter feature `collapsed: false`
+
 ## Version 0.0.15
 
 **Fixed**

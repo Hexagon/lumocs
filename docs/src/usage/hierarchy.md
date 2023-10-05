@@ -31,6 +31,9 @@ nav_order: 1
 ---
 ```
 
+> **Note**<br> To prevent a section with children from being collapsed, use
+> front matter option `collapse: false`. { .note }
+
 ## Second Level: Subsections
 
 The second level includes subsections or specific topics under the main

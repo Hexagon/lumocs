@@ -35,6 +35,8 @@ front matter.
   the sidebar menu.
 - **nav_order**: The position in navigation. A smaller number places it higher
   in the list.
+- **collapse**: Set to `false` to prevent descendants of this page from being
+  collapsed.
 - **lang**: Language code (e.g., "en" for English), usually set globally through
   `_data.json`.
 - **substitute**: YAML-based values for substitution on the page.

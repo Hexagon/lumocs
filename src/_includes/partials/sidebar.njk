@@ -1,24 +1,79 @@
+{% set currentUrl = page.data.url %}
 <nav>
     <ul>
         <!-- Page Hierarchy -->
-        {% for navPage in search.pages("","nav_order=asc") %}
-            {% if not navPage.data.parent %}
-                <li class="level0 bold">
-                    <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
-                </li>
-                {% set searchParam1 = ["parent='", navPage.data.title, "'"] | join %}
-                {% for subPage1 in search.pages(searchParam1,"nav_order=asc") %}
-                    <li class="level1">
-                        <a href="{{ subPage1.data.url }}">{{ subPage1.data.title }}</a>
-                    </li>
-                    {% set searchParam2 = ["parent='", subPage1.data.title, "'"] | join %}
-                    {% for subPage2 in search.pages(searchParam2,"nav_order=asc") %}
-                        <li class="level2">
-                            <a href="{{ subPage2.data.url }}">{{ subPage2.data.title }}</a>
+        {% for navPage in search.pages("parent=undefined","nav_order=asc") %}
+
+            {% set collapsed1="collapsed" %}
+            {% set children1="" %}
+            {% if navPage.data.url == currentUrl or navPage.data.collapse == false %}
+                {% set collapsed1 = "" %}
+            {% endif %}
+
+            {% set searchParam1 = ["parent='", navPage.data.title, "'"] | join %}
+            {% set subPages1 = search.pages(searchParam1,"nav_order=asc") %}
+            {% for subPage1Search in subPages1 %}
+                {% set children1 = "children" %}
+                {% if subPage1Search.data.url == currentUrl %}
+                    {% set collapsed1 = "" %}
+                {% endif %}
+            {% endfor %}
+
+            <li class="level0 bold {{ collapsed1 }} {{ children1 }}">
+
+                {% if children1 %}
+                    {% if collapsed1 == "collapsed" %}
+                        <i class="fas fa-chevron-down right"></i>
+                    {% endif %}
+                {% endif %}
+                
+                <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
+
+                {% if subPages1.length %}
+                    <ul>
+                    {% for subPage1 in subPages1 %}
+
+                        {% set collapsed2="collapsed" %}
+                        {% set children2="" %}
+
+                        {% if subPage1.data.url == currentUrl or subPage1.data.collapse == false %}
+                            {% set collapsed2 = "" %}
+                        {% endif %}
+                    
+                        {% set searchParam2 = ["parent='", subPage1.data.title, "'"] | join %}
+                        {% set subPages2 = search.pages(searchParam2,"nav_order=asc") %}
+
+                        {% for subPage2Search in subPages2 %}
+                            {% set children2 = "children" %}
+                            {% if subPage2Search.data.url == currentUrl %}
+                                {% set collapsed2 = "" %}
+                            {% endif %}
+                        {% endfor %}
+                        
+                        <li class="level1 {{ collapsed2 }} {{ children2 }}">
+
+                            {% if children2 %}
+                                {% if collapsed2 == "collapsed" %}
+                                    <i class="fas fa-chevron-down right"></i>
+                                {% endif %}
+                            {% endif %}
+                            
+                            <a href="{{ subPage1.data.url }}">{{ subPage1.data.title }}</a>
+
+                            {% if subPages2.length %}
+                                <ul>
+                                {% for subPage2 in subPages2 %}
+                                    <li class="level2">
+                                        <a href="{{ subPage2.data.url }}">{{ subPage2.data.title }}</a>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            {% endif %}
                         </li>
                     {% endfor %}
-                {% endfor %}
-            {% endif %}
+                    </ul>
+                {% endif %}
+            </li>
         {% endfor %}
 
         <!-- Spacer -->

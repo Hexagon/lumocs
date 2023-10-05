@@ -1,6 +1,7 @@
 ---
 title: "Getting Started"
 nav_order: 2
+collapse: false
 ---
 
 # Getting Started With Lumocs
