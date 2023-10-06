@@ -1,93 +1,107 @@
 {% set currentUrl = page.data.url %}
 <nav>
-    <ul>
-        <!-- Page Hierarchy -->
-        {% for navPage in search.pages("parent=undefined","nav_order=asc") %}
+    {% set rootPages = search.pages("parent=undefined","nav_order=asc") %}
+    {% if rootPages.length > 1 %}
+        <ul>
+            <!-- Page Hierarchy -->
+            {% for navPage in rootPages %}
 
-            {% set collapsed1="collapsed" %}
-            {% set children1="" %}
-            {% if navPage.data.url == currentUrl or navPage.data.collapse == false %}
-                {% set collapsed1 = "" %}
-            {% endif %}
-
-            {% set searchParam1 = ["parent='", navPage.data.title, "'"] | join %}
-            {% set subPages1 = search.pages(searchParam1,"nav_order=asc") %}
-            {% for subPage1Search in subPages1 %}
-                {% set children1 = "children" %}
-                {% if subPage1Search.data.url == currentUrl %}
+                {% set collapsed1="collapsed" %}
+                {% set children1="" %}
+                {% if navPage.data.url == currentUrl or navPage.data.collapse == false %}
                     {% set collapsed1 = "" %}
                 {% endif %}
-            {% endfor %}
 
-            <li class="level0 bold {{ collapsed1 }} {{ children1 }}">
-
-                {% if children1 %}
-                    {% if collapsed1 == "collapsed" %}
-                        <i class="fas fa-chevron-down right"></i>
+                {% set searchParam1 = ["parent='", navPage.data.title, "'"] | join %}
+                {% set subPages1 = search.pages(searchParam1,"nav_order=asc") %}
+                {% for subPage1Search in subPages1 %}
+                    {% set children1 = "children" %}
+                    {% if subPage1Search.data.url == currentUrl %}
+                        {% set collapsed1 = "" %}
                     {% endif %}
-                {% endif %}
-                
-                <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
+                {% endfor %}
 
-                {% if subPages1.length %}
-                    <ul>
-                    {% for subPage1 in subPages1 %}
+                <li class="level0 bold {{ collapsed1 }} {{ children1 }}">
 
-                        {% set collapsed2="collapsed" %}
-                        {% set children2="" %}
-
-                        {% if subPage1.data.url == currentUrl or subPage1.data.collapse == false %}
-                            {% set collapsed2 = "" %}
+                    {% if children1 %}
+                        {% if collapsed1 == "collapsed" %}
+                            <i class="fas fa-chevron-down right"></i>
                         {% endif %}
+                    {% endif %}
                     
-                        {% set searchParam2 = ["parent='", subPage1.data.title, "'"] | join %}
-                        {% set subPages2 = search.pages(searchParam2,"nav_order=asc") %}
+                    <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
 
-                        {% for subPage2Search in subPages2 %}
-                            {% set children2 = "children" %}
-                            {% if subPage2Search.data.url == currentUrl %}
+                    {% if subPages1.length %}
+                        <ul>
+                        {% for subPage1 in subPages1 %}
+
+                            {% set collapsed2="collapsed" %}
+                            {% set children2="" %}
+
+                            {% if subPage1.data.url == currentUrl or subPage1.data.collapse == false %}
                                 {% set collapsed2 = "" %}
                             {% endif %}
-                        {% endfor %}
                         
-                        <li class="level1 {{ collapsed2 }} {{ children2 }}">
+                            {% set searchParam2 = ["parent='", subPage1.data.title, "'"] | join %}
+                            {% set subPages2 = search.pages(searchParam2,"nav_order=asc") %}
 
-                            {% if children2 %}
-                                {% if collapsed2 == "collapsed" %}
-                                    <i class="fas fa-chevron-down right"></i>
+                            {% for subPage2Search in subPages2 %}
+                                {% set children2 = "children" %}
+                                {% if subPage2Search.data.url == currentUrl %}
+                                    {% set collapsed2 = "" %}
                                 {% endif %}
-                            {% endif %}
+                            {% endfor %}
                             
-                            <a href="{{ subPage1.data.url }}">{{ subPage1.data.title }}</a>
+                            <li class="level1 {{ collapsed2 }} {{ children2 }}">
 
-                            {% if subPages2.length %}
-                                <ul>
-                                {% for subPage2 in subPages2 %}
-                                    <li class="level2">
-                                        <a href="{{ subPage2.data.url }}">{{ subPage2.data.title }}</a>
-                                    </li>
-                                {% endfor %}
-                                </ul>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                    </ul>
-                {% endif %}
-            </li>
-        {% endfor %}
+                                {% if children2 %}
+                                    {% if collapsed2 == "collapsed" %}
+                                        <i class="fas fa-chevron-down right"></i>
+                                    {% endif %}
+                                {% endif %}
+                                
+                                <a href="{{ subPage1.data.url }}">{{ subPage1.data.title }}</a>
 
-        <!-- Spacer -->
-        <li><!-- Spacer -->&nbsp;</li>
+                                {% if subPages2.length %}
+                                    <ul>
+                                    {% for subPage2 in subPages2 %}
+                                        <li class="level2">
+                                            <a href="{{ subPage2.data.url }}">{{ subPage2.data.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
-        <!-- Adding nav_links from _data.json -->
-        {% for link in nav_links %}
-            <li class="level0">
-                <a href="{{ link.url }}" title="{{ link.title }}">
-                    {{ link.title }} <i class="fa fa-external-link" aria-hidden="true"></i>
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+    <!-- Add nav_links -->
+    {% if nav_links.length > 0 %}
+        <ul>
+            {% for link in nav_links %}
+                <li class="level0">
+                    <a href="{{ link.url }}" title="{{ link.title }}">
+                        {{ link.title }} <i class="fa fa-external-link" aria-hidden="true"></i>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <!-- Add TOC -->
+    {% if page.data.toc.length > 1 %}
+        <div class="toc_container">
+            <a id="top_link" href="javascript: void(0);">To the top</a>
+            <h6>TABLE OF CONTENT</h6>
+            <!-- TOC -->
+        </div>
+    {% endif %}
+
 </nav>
 
 {% include "sidebar.njk" %}

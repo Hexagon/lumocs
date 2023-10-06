@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  let position = undefined;
+
   // Show/Hide hamburger menu
   document.getElementById("hamburger-wrapper").addEventListener(
     "click",
@@ -9,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         sidebar.style.display = "";
       }
+      position = window.scrollY;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
   );
 
@@ -18,9 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const isClickInside = sidebar.contains(event.target);
     const isHamburgerClicked = document.getElementById("hamburger-wrapper")
       .contains(event.target);
-
     if (!isClickInside && !isHamburgerClicked && window.innerWidth <= 992) {
       sidebar.style.display = "";
+      window.scrollTo({ top: position, behavior: 'smooth' });
     }
   });
+
+  document.getElementById("top_link").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
 });

@@ -87,6 +87,10 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     #hamburger-wrapper {
         display: block;
     }
+    header {
+        position: sticky;
+        top: 0px;
+    }
 }
 
 /* Header */
@@ -151,7 +155,11 @@ h4, aside nav {
     margin-bottom: 18px;
 }
 
-aside .level0 {
+h4, aside nav {
+    height: 100%;
+}
+
+aside li {
     padding-left: 7.5px;
 }
 
@@ -177,6 +185,17 @@ aside ul i {
     margin-right: 18px;
     margin-top: 0.3rem;
 }
+
+aside .toc_container {
+    position: sticky;
+    top:1rem;
+    margin-top:1rem;
+}
+
+aside {
+    background: var(--background-color);
+}
+
 /* Alignment */
 .right {
     float: right;
