@@ -70,8 +70,7 @@ const dataJsonTemplate = `
 `;
 
 // src/index.md template
-const indexMdTemplate = `
----
+const indexMdTemplate = `---
 title: "First Page"
 nav_order: 1
 ---

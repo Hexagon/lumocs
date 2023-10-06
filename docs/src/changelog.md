@@ -13,6 +13,12 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.20
+
+**Fixed**
+
+- Fixed bootstrapper script
+
 ## Version 0.0.19
 
 **Fixed**
