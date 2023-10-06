@@ -27,5 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: position, behavior: "smooth" });
     }
   });
-
 });

@@ -33,7 +33,17 @@ called `/docs/src`.
 Before we start, make sure that you have Deno (version 1.37 or higher) installed
 on your system. If not, refer to the [official instructions] to install Deno.
 
-## Adding The Essential Files
+## Automated Bootstrapping
+
+Run the following command to bootstrap a Lumocs site automatically:
+
+`deno run -A https://deno.land/x/lumocs/init.ts docs`
+
+This will create all required files in the subfolder `/docs` of current
+directory. To test your site, `cd docs` and `deno task serve`. Then visit
+`http://localhost:8000`.
+
+## Manual Bootstrapping
 
 ### `deno.json`
 

@@ -8,5 +8,8 @@
     "exclude": [
       "**/_site"
     ]
+  },
+  "tasks": {
+    "build": "rm -r demo-repository/docs/ || deno run -A init.ts demo-repository/docs"
   }
 }

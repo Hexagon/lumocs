@@ -72,13 +72,15 @@ export default function (options: Options = {}) {
 
     // Substitution feature
     site.process([".md"], (page: Page) => {
-      for (const obj of Object.entries(page.data.substitute)) {
-        const key = obj[0],
-          value = obj[1];
-        page.content = (page.content as string).replaceAll(
-          key,
-          value as string,
-        );
+      if (page.data.substitute) {
+        for (const obj of Object.entries(page.data.substitute)) {
+          const key = obj[0],
+            value = obj[1];
+          page.content = (page.content as string).replaceAll(
+            key,
+            value as string,
+          );
+        }
       }
     });
 

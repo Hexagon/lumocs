@@ -13,6 +13,13 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.18
+
+**Fixed**
+
+- Add bootstrapping script
+- Interactive collapse/expand of menu sections
+
 ## Version 0.0.17
 
 **Fixed**
