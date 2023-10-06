@@ -24,9 +24,10 @@
                 <li class="level0 bold {{ collapsed1 }} {{ children1 }}">
 
                     {% if children1 %}
-                        {% if collapsed1 == "collapsed" %}
-                            <i class="fas fa-chevron-down right"></i>
-                        {% endif %}
+                        <div class="right collapser">
+                            <i class="fas fa-chevron-down down"></i>
+                            <i class="fas fa-chevron-up up"></i>
+                        </div>
                     {% endif %}
                     
                     <a href="{{ navPage.data.url }}">{{ navPage.data.title }}</a>
@@ -55,9 +56,10 @@
                             <li class="level1 {{ collapsed2 }} {{ children2 }}">
 
                                 {% if children2 %}
-                                    {% if collapsed2 == "collapsed" %}
-                                        <i class="fas fa-chevron-down right"></i>
-                                    {% endif %}
+                                    <div class="right collapser">
+                                        <i class="fas fa-chevron-down down"></i>
+                                        <i class="fas fa-chevron-up up"></i>
+                                    </div>
                                 {% endif %}
                                 
                                 <a href="{{ subPage1.data.url }}">{{ subPage1.data.title }}</a>
@@ -84,7 +86,7 @@
     {% if nav_links.length > 0 %}
         <ul>
             {% for link in nav_links %}
-                <li class="level0">
+                <li>
                     <a href="{{ link.url }}" title="{{ link.title }}">
                         {{ link.title }} <i class="fa fa-external-link" aria-hidden="true"></i>
                     </a>

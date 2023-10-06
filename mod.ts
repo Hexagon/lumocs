@@ -11,10 +11,13 @@ export default function (options: Partial<Options> = {}) {
 
     // Add remote files
     const files = [
-      // Static content
+      // CSS
       "css/style.css",
+
+      // JS
       "js/theme-switcher.js",
       "js/hamburger.js",
+      "js/hierarchy.js",
 
       // Overridable
       "_includes/footer.njk",

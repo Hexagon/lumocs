@@ -147,16 +147,21 @@ footer .notice {
 }
 
 /* Sidebar */
+aside nav ul {
+    margin: 0;
+    margin-inline: 0;
+}
 aside li {
-    padding: 4px 0;
+    padding:  0.1rem 0.5rem;
 }
 
-h4, aside nav {
+aside a {
+    padding: 0.2rem;
+    margin: 0;
+}
+
+aside nav {
     margin-bottom: 18px;
-}
-
-aside li {
-    padding-left: 7.5px;
 }
 
 aside .level1 {
@@ -169,22 +174,37 @@ aside .level2 {
 }
 
 aside i {
-    padding-left: 0.3rem;
+    padding: 0.5rem;
+    margin: 0;
     font-size: 0.8rem;
 }
 
-aside ul .collapsed ul {
-    display:none;
+aside i:hover {
+    background-color: var(--alt-background-color);
+    border-radius: 20%;
 }
 
-aside ul i {
-    margin-right: 18px;
-    margin-top: 0.3rem;
-}
-
+/* Sticky Sidebar */
 aside nav {
     position: sticky;
     top:1rem;
+}
+
+/* Sidebar Hierarchy */
+.collapsed ul {
+    display: none;
+}
+
+li.collapsed > div > .fa-chevron-up {
+    display: none;
+}
+
+:not(li.collapsed) > div >  .fa-chevron-down {
+    display: none;
+}
+
+.down, .up {
+    cursor: pointer;
 }
 
 /* Alignment */

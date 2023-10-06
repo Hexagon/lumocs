@@ -28,7 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.getElementById("top_link").addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
 });
