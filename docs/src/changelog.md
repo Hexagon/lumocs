@@ -13,6 +13,14 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.17
+
+**Fixed**
+
+- Make header sticky in mobile view
+- Make menu sticky in normal view
+- Fix typos
+
 ## Version 0.0.16
 
 **Fixed**

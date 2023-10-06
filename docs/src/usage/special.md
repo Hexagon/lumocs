@@ -1,5 +1,5 @@
 ---
-title: "Soecial Features"
+title: "Special Features"
 parent: "Getting Started"
 nav_order: 6
 ---

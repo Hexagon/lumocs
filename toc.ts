@@ -27,7 +27,7 @@ export function renderTOC(toc: string | any[]) {
 
 /*
   WIP
-  
+
     <!-- Add TOC -->
     <!--
     {% if page.data.toc.length > 1 %}

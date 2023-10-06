@@ -187,10 +187,6 @@ aside nav {
     top:1rem;
 }
 
-aside {
-    background: var(--background-color);
-}
-
 /* Alignment */
 .right {
     float: right;
