@@ -37,7 +37,7 @@ on your system. If not, refer to the [official instructions] to install Deno.
 
 Run the following command to bootstrap a Lumocs site automatically:
 
-`deno run -A https://deno.land/x/lumocs/init.ts docs`
+`deno run -Ar https://deno.land/x/lumocs/init.ts docs`
 
 This will create all required files in the subfolder `/docs` of current
 directory. To test your site, `cd docs` and `deno task serve`. Then visit

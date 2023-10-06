@@ -1,10 +1,9 @@
 // Define Lume and Lumocs versions here
 const lumeVersion = "v1.19.1";
-const lumocsVersion = "0.0.18";
+const lumocsVersion = "0.0.20";
 
 // deno.json template
-const denoJsonTemplate = `
-{
+const denoJsonTemplate = `{
   "tasks": {
     "lume": "echo \\"import 'lume/cli.ts'\\" | deno run --unstable -A -",
     "serve": "deno task lume -s --port=8000"
@@ -17,8 +16,7 @@ const denoJsonTemplate = `
 `;
 
 // _config.ts template
-const configTsTemplate = `
-import lume from "lume/mod.ts";
+const configTsTemplate = `import lume from "lume/mod.ts";
 import lumocs from "lumocs/mod.ts";
 
 const siteUrl = "https://url.of.site";
@@ -34,8 +32,7 @@ export default site;
 `;
 
 // src/_data.json template
-const dataJsonTemplate = `
-{
+const dataJsonTemplate = `{
   "lang": "en",
   "layout": "page.njk",
   "metas": {
