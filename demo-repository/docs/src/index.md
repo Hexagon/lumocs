@@ -1,6 +1,8 @@
----
 
-## title: "First Page" nav_order: 1
+---
+title: "First Page"
+nav_order: 1
+---
 
 # First Page
 
