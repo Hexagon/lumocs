@@ -155,10 +155,6 @@ h4, aside nav {
     margin-bottom: 18px;
 }
 
-h4, aside nav {
-    height: 100%;
-}
-
 aside li {
     padding-left: 7.5px;
 }
@@ -186,10 +182,9 @@ aside ul i {
     margin-top: 0.3rem;
 }
 
-aside .toc_container {
+aside nav {
     position: sticky;
     top:1rem;
-    margin-top:1rem;
 }
 
 aside {
