@@ -8,4 +8,7 @@ const site = lume({
 
 site.use(lumocs());
 
+site.copy("img");
+site.copy("site.webmanifest");
+
 export default site;

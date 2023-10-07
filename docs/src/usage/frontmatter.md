@@ -29,6 +29,9 @@ front matter.
   couple of subkeys:
   - **site:** Overall name of the entire documentation site, usually set
     globally through `_data.json`
+  - **icon:** Icon of the site displayed just by the site name, make sure to
+    include `site.copy("img")` in your `_config.yaml` if you do place your icon
+    in the `img`-folder.
   - **description:** Set from the `description` in the page's front matter.
   - **title:** Dynamically set from the `title` in the page's front matter.
 - **parent**: The parent page title, used to organize pages hierarchically in

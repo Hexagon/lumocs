@@ -1,6 +1,7 @@
 {
   "metas": {
     "site": "Lumocs Documentation",
+    "icon": "img/android-chrome-192x192.png",
     "title": "=title",
     "description": "=description",
     "lang": "=lang"
