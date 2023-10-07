@@ -1,0 +1,170 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
+
+/* Theme */
+:root {
+    --badge-color: #333;
+    --badge-background: #CCC;
+    --badge-color-alt: #333;
+    --badge-background-alt: rgb(8, 211, 247);
+    --font-size: 13px;
+}
+
+[data-theme="dark"] {
+    --alt-background-color: rgb(12, 18, 22);
+    --alt-border-color: rgb(22, 28, 32);
+}
+
+[data-theme="light"] {
+    --alt-background-color: rgb(240, 244, 248);
+    --alt-border-color: rgb(230, 234, 238);
+}
+
+/* Reset Pico CSS Responsive padding */
+body > header, body > footer, body > main {
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Pico CSS Overrides */
+.container section > :first-child {
+    margin-top: 0px;
+}
+
+p {
+    margin-top: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-weight: normal;
+}
+
+@media (min-width: 576px) {
+    :root {
+        --font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --font-size: 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    main .grid {
+        grid-template-columns: 20% auto;
+    }
+    main .gridright {
+        grid-template-columns: auto 20%;
+    }
+    #hamburger-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .grid > aside {
+        display: none;
+        width: 100%;
+        margin-top: 0.5rem !important;
+    }
+    #hamburger-wrapper {
+        display: block;
+    }
+    header {
+        position: sticky;
+        top: 0px;
+    }
+}
+
+/* Header */
+header, footer {
+    background-color: var(--alt-background-color);
+}
+
+header {
+    border-bottom: 1px solid var(--alt-border-color);
+}
+
+header nav, aside nav {
+    margin: 0;
+}
+
+#theme-switcher {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+/* Main Content */
+.main-wrapper, main, main.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100%;
+}
+main {
+    padding-top: 2rem;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--alt-border-color);
+    margin-top: 3rem;
+    flex-shrink: 0;
+}
+
+footer .grid {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer .notice {
+    font-size: 0.9rem;
+}
+
+
+/* Alignment */
+.right {
+    float: right;
+    text-align: right;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Hamburger */
+#hamburger-wrapper {
+    padding: 0px;
+}
+
+#hamburger-btn {
+    cursor: pointer;
+    background-color: var(--alt-border-color);
+    padding: 6px 10px 6px 10px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    margin-bottom: 10px;
+}

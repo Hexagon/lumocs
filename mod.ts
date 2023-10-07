@@ -12,7 +12,9 @@ export default function (options: Partial<Options> = {}) {
     // Add remote files
     const files = [
       // CSS
-      "css/style.css",
+      "css/general.css",
+      "css/sidebar.css",
+      "css/blockquotes.css",
 
       // JS
       "js/theme-switcher.js",

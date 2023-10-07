@@ -1,8 +1,7 @@
 # Lumocs Demo Repository
 
-This is the demo repository for
-[Lumocs](https://github.com/hexagon/lumocs)ndocumentation theme designed for
-Lume.
+This is the demo repository for [Lumocs](https://github.com/hexagon/lumocs)
+documentation theme for Lume.
 
 ## Quick Start
 

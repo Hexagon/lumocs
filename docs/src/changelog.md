@@ -13,6 +13,13 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.21
+
+**Fixed**
+
+- Visual fixes
+- CSS Refactor
+
 ## Version 0.0.20
 
 **Fixed**

@@ -1,0 +1,94 @@
+/* Blockquote styles */
+blockquote {
+    border-left: 4px solid currentColor;
+    margin-left: 0;
+    padding-left: 1rem;
+    font-style: normal;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+/* Note, Success, Warning, and Error styles */
+.note, .success, .warning, .error {
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: var(--font-size);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.note::before, .success::before, .warning::before, .error::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+/* Note Styles */
+.note {
+    background-color: #e6f1f9;
+    border-left: 4px solid #c7dbe8;
+    color: #4E4E4E;
+}
+.note::before {
+    content: "\f05a";  /* Font Awesome Info Circle */
+    color: #c7dbe8;
+}
+
+/* Success Styles */
+.success {
+    color: #4CAF50;
+    background-color: #E8F5E9;
+    border-left: 4px solid #4CAF50;
+}
+.success::before {
+    content: "\f00c";  /* Font Awesome Check */
+}
+
+/* Warning Styles */
+.warning {
+    color: #FF9800;
+    background-color: #FFF3E0;
+    border-left: 4px solid #FF9800;
+}
+.warning::before {
+    content: "\f071";  /* Font Awesome Exclamation Triangle */
+}
+
+/* Error Styles */
+.error {
+    color: #f44336;
+    background-color: #FFEBEE;
+    border-left: 4px solid #f44336;  /* Red border */
+}
+.error::before {
+    content: "\f057";  /* Font Awesome Times Circle */
+}
+
+/* Blockquote styles for dark theme */
+[data-theme="dark"] .note {
+    background-color: #1f2e3f;
+    border-left-color: #3a5a7a;
+    color: #D0D0D0;
+}
+
+[data-theme="dark"] .success {
+    background-color: #385738;
+    border-left-color: #4CAF50;
+}
+
+[data-theme="dark"] .warning {
+    background-color: #5a4220;
+    border-left-color: #FF9800;
+}
+
+[data-theme="dark"] .error {
+    background-color: #542B2B;
+    border-left-color: #f44336;
+}

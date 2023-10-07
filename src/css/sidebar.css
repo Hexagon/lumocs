@@ -1,0 +1,77 @@
+/* Reset margins for ul and li elements inside the aside */
+aside nav ul,
+aside li {
+    margin: 0;
+    margin-inline: 0;
+}
+
+aside li {
+    padding: 0.1rem 0.5rem;
+}
+
+aside a {
+    padding: 0.2rem;
+    margin: 0;
+}
+
+aside nav {
+    margin-bottom: 18px;
+}
+
+aside nav > ol, aside nav > ul {
+    margin-bottom: 18px;
+}
+
+aside nav > ol:first-of-type, aside nav > ul:first-of-type {
+    margin: 0;
+    margin-bottom: 18px;
+}
+
+/* Indent level 1 navigation items */
+aside .level1 {
+    padding-left: 1rem;
+}
+
+/* Indent level 2 navigation items with smaller font size */
+aside .level2 {
+    padding-left: 2rem;
+    font-size: 0.95rem;
+}
+
+aside i {
+    padding: 0.5rem;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* Hover effect for icons */
+aside i:hover {
+    background-color: var(--alt-background-color);
+    border-radius: 20%;
+}
+
+/* Sticky sidebar navigation */
+aside nav {
+    position: sticky;
+    top: 1rem;
+}
+
+/* Expand/Collapse styles */
+.collapsed ul {
+    display: none;
+}
+
+/* Hide "up" chevron icon when list item is collapsed */
+li.collapsed > div > .fa-chevron-up {
+    display: none;
+}
+
+/* Hide "down" chevron icon when list item is not collapsed */
+:not(li.collapsed) > div > .fa-chevron-down {
+    display: none;
+}
+
+/* Cursor styles for expand/collapse icons */
+.down, .up {
+    cursor: pointer;
+}
