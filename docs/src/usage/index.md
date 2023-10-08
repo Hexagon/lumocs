@@ -83,8 +83,16 @@ const site = lume({
 
 site.use(lumocs());
 
+// OPTIONAL: site.copy("img")
+
 export default site;
 ```
+
+To copy extra content, such as images or other assets, during the build process,
+use the `site.copy()` method and specify the folder name you want to copy.
+Replace `img`` in the example with the name of the folder containing the content
+you wish to include in your website. This ensures that the specified folder and
+its contents will be copied to the appropriate location when your site is built.
 
 ### `src/_data.json`
 

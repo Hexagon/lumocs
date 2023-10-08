@@ -10,6 +10,9 @@
 
     <!-- Brand Name -->
     <li>
+      {% if metas.logo %}
+        <img class="navbar-logo" src="{{ metas.icon }}">
+      {% endif %}
       <a class="navbar-brand" href="/">
         {{ metas.site }}
       </a>

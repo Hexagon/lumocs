@@ -54,6 +54,13 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-weight: normal;
 }
 
+.navbar-logo {
+    max-height: 1.5rem;
+    max-width: 1.5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.75rem;
+}
+
 @media (min-width: 576px) {
     :root {
         --font-size: 14px;

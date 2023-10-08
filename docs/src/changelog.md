@@ -13,6 +13,13 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.22
+
+**Fixed**
+
+- Add favicon instructions
+- Make favicon/heder-icon configurable.
+
 ## Version 0.0.21
 
 **Fixed**

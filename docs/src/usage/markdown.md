@@ -84,6 +84,10 @@ Example:
 ![Alt text](http://www.example.com/image.jpg)
 ```
 
+> To include local images, create a subfolder named img and add site.copy("img")
+> to your _config.ts file. This step will copy the img folder during the build
+> process. { .note }
+
 ## Footnotes
 
 ```markdown

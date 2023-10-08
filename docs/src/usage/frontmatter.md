@@ -29,7 +29,7 @@ front matter.
   couple of subkeys:
   - **site:** Overall name of the entire documentation site, usually set
     globally through `_data.json`
-  - **icon:** Icon of the site displayed just by the site name, make sure to
+  - **logo:** Logo of the site displayed just by the site name. Make sure to
     include `site.copy("img")` in your `_config.yaml` if you do place your icon
     in the `img`-folder.
   - **description:** Set from the `description` in the page's front matter.
