@@ -18,7 +18,7 @@ understand the changes at a glance.
 **Fixed**
 
 - Add favicon instructions
-- Make favicon/heder-icon configurable.
+- Make favicon/header-icon configurable.
 
 ## Version 0.0.21
 
