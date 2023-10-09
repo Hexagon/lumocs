@@ -6,7 +6,8 @@
   },
   "fmt": {
     "exclude": [
-      "**/_site"
+      "**/_site",
+      "**/*.md"
     ]
   },
   "tasks": {

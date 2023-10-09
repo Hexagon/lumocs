@@ -64,8 +64,9 @@ front matter.
 
   ```markdown
   top_links:
-
-  - title: "Home" url: "/"
+  - icon: "fab fa-npm"
+    title: "NPM Library"
+    url: "https://npmjs.com"
   ```
 
 - **nav_links**: Sidebar or main menu navigation links. Usually set in
@@ -73,8 +74,9 @@ front matter.
 
   ```markdown
   nav_links:
-
-  - title: "Setup Guide" url: "/setup/"
+  - icon: "fab fa-npm"
+    title: "NPM Library"
+    url: "https://npmjs.com"
   ```
 
 ## Considerations
