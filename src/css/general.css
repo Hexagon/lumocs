@@ -35,6 +35,10 @@ body {
 .container section > :first-child {
     margin-top: 0px;
 }
+.container section > :first-child > :first-child {
+    margin-top: 0px;
+}
+
 
 p {
     margin-top: 2rem;
@@ -74,10 +78,10 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 @media (min-width: 992px) {
-    main .grid {
+    main > .grid {
         grid-template-columns: 20% auto;
     }
-    main .gridright {
+    main > .gridright {
         grid-template-columns: auto 20%;
     }
     #hamburger-wrapper {

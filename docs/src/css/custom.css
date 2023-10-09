@@ -1,0 +1,50 @@
+/* Index Page Hero */
+
+.hero-grid {
+  column-gap: 0;
+}
+.hero-box {
+    background-color: var(--alt-background-color);
+    padding: 1rem;
+}
+.hero-box code {
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    word-break: break-word;
+    background-color: var(--background-color);
+    color: var(--primary-dark);
+    width: 100%;
+}
+
+.hero-box code pre {
+    background-color: var(--background-color);
+    color: var(--primary-dark);
+}
+
+.small-quote {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+@media (min-width: 992px) {
+    .hero-box {
+        padding-left: 0.25rem;
+    }
+    .hero-box-left {
+        border-top-left-radius: 0.75rem;
+        border-bottom-left-radius: 0.75rem;
+        padding-left: 1rem;
+    }
+    .hero-box-right {
+        border-top-right-radius: 0.75rem;
+        border-bottom-right-radius: 0.75rem;
+    }
+
+/* Typography */
+.primary {
+    color: var(--primary);
+}

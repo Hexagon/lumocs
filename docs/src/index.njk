@@ -1,0 +1,67 @@
+---
+title: "Overview"
+metas:
+  title: "Lumocs"
+description: "A simple and elegant documentation generator powered by Deno and Lume."
+nav_order: 1
+---
+
+<hgroup>
+  <h3>Welcome to the documentation of <span style="color: var(--primary)">Lumocs</span></h3>
+  <span>... a <strong>simple and elegant</strong> documentation generator powered by Deno and <a href="https://lume.land">Lume</a>. Steps to get started:</span>
+</hgroup>
+
+<div class="grid hero-grid">
+    <div class="hero-box hero-box-left">
+        <span><i class="fas fa-cog step-icon"></i>
+        <strong> 1:</strong> Ensure that you have <a href="https://deno.com">Deno</a> installed, then run the following command:</span>
+        <code>deno run -A https://deno.land/x/lumocs/init.ts docs</code>
+        <span class="small-quote">This will set up a folder named <i>docs</i>, containing the essential configuration.</span>
+    </div>
+    <div class="hero-box">
+        <span><i class="fas fa-edit step-icon"></i><strong>2:</strong> Create content in the <i>docs/src</i> folder using your favorite template language:</span>
+        <code><pre>
+---
+title: "New Section"
+---
+
+# Documentation
+
+This is the new section
+        </pre></code>
+    </div>
+
+    <div class="hero-box hero-box-right">
+        <span><i class="fas fa-server step-icon"></i>
+        <strong>3:</strong> Generate your site:</span>
+        <code>cd docs</code>
+        <span class="small-quote">... and build the site to <i>docs/_site</i>:</span>
+        <code>deno task lume</code>
+        <span class="small-quote">... or check it out at <a href="https://localhost:8080">https://localhost:8080</a> using:</span>
+        <code>deno task serve</code>
+        <span class="small-quote">... or <a href="./usage/deployment.md">Deploy automatically to GitHub Pages</a>.</span>
+    </div>
+</div>
+
+<div class="grid">
+  <div>
+    <h3>Getting Started</h3>
+    <hr>
+    <p>For a hands-on experience, use the getting started steps above, or explore the <a href="https://github.com/hexagon/lumocs/tree/main/demo-repository">demo-repository folder</a> in the Lumocs GitHub repository. It contains a ready-made setup that demonstrates how to integrate Lumocs into the <code>/docs</code> subfolder of an existing project repository. Additionally, it includes an example GitHub Workflow for automatic deployment to <a href="./usage/deployment.md">GitHub Pages</a>.</p>
+    <p>Whether you're documenting an open-source project, internal tools, or anything in between, Lumocs streamlines the process, ensuring your documentation is both informative and visually appealing.</p>
+  </div>
+  <div>
+    <h3>Highlights</h3>
+    <hr>
+    <ul>
+        <li>Design and layout <strong class="primary">tailored for documentation</strong>.</li>
+        <li>Automatic <strong class="primary">light or dark mode</strong> by user preference.</li>
+        <li><strong class="primary">No configuration</strong> needed, <strong class="primary">looks great</strong> out of the box.</li>
+        <li>Generates a documentation website using <strong class="primary">your favorite templating-language</strong>.</li>
+        <li><strong class="primary">Easy to customize</strong>.</li>
+        <li>Mobile-<strong class="primary">responsive design</strong>.</li>
+        <li>Ready for deployment on <strong class="primary">GitHub Pages</strong>.</li>
+        <li>Built with <strong class="primary">modern tools</strong>: Deno and Lume.</li>
+    </ul>
+  </div>
+</div>
