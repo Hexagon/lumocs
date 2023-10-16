@@ -31,7 +31,7 @@ called `/docs/src`.
 ## Prerequisites
 
 Before we start, make sure that you have Deno (version 1.37 or higher) installed
-on your system. If not, refer to the [official instructions] to install Deno.
+on your system. If not, refer to the [official instruction](https://docs.deno.com/runtime/manual/getting_started/installation) to install Deno.
 
 ## Automated Bootstrapping
 
