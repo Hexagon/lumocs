@@ -79,13 +79,33 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 @media (min-width: 992px) {
     main > .grid {
-        grid-template-columns: 20% auto;
+        grid-template-columns: 30% auto;
     }
     main > .gridright {
-        grid-template-columns: auto 20%;
+        grid-template-columns: auto 30%;
     }
     #hamburger-wrapper {
         display: none;
+    }
+    .grid>aside>.aside-content,.gridright>aside>.aside-content  {
+        max-width:242px;
+    }
+    .grid>section,.gridright>section  {
+        max-width:750px;
+    }
+    .grid>aside>.aside-content {
+        margin-left: auto;
+    }
+    .grid>section {
+        margin-right: auto;
+        padding-left: 1rem;
+    }
+    .gridright>aside>.aside-content {
+        margin-right: auto;
+    }
+    .gridright>section {
+        margin-left: auto;
+        padding-right: 1rem;
     }
 }
 
@@ -98,19 +118,11 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     #hamburger-wrapper {
         display: block;
     }
-    header {
-        position: sticky;
-        top: 0px;
-    }
 }
 
 /* Header */
-header, footer {
+aside, footer {
     background-color: var(--alt-background-color);
-}
-
-header {
-    border-bottom: 1px solid var(--alt-border-color);
 }
 
 header nav, aside nav {
@@ -129,10 +141,6 @@ header nav, aside nav {
     flex: 1;
     min-height: 100%;
 }
-main {
-    padding-top: 2rem;
-}
-
 /* Footer */
 footer {
     border-top: 1px solid var(--alt-border-color);

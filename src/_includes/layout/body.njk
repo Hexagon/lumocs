@@ -4,18 +4,7 @@ layout: layout/html.njk
 
 <body>
 
-  <header class="container-fluid">
-    <div class="container">
-    {% include "partials/nav.njk" %}
-    </div>
-  </header>
-
-  <div class="main-wrapper">
-    <main class="container">
-      <!-- content -->
-      {{ content | safe }}
-    </main>
-  </div>
+  {{ content | safe }}
 
   <footer class="container-fluid">
     <div class="container">
