@@ -9,9 +9,23 @@ nav_order: 5
 ---
 
 Lumocs provides flexibility in customizing various parts of your documentation.
-Whether it's adding extra content between the `<head>` tags, customizing the
+Whether it's adding extra content between the `<head>` tags, changing the color, customizing the
 footer, or altering the sidebar, Lumocs offers a straightforward approach to
 achieve this.
+
+### Changing the color
+
+Lumocs supports changing the color (hue) of the entire site by changing a single css variable. Add the code below to your `_includes/head.njk` to change the color:
+
+Move the slider to update the code and get a live demo:
+
+<input type="range" min="0" max="255" oninput="javascript: setHue(this.value);">
+
+<pre class="hljs language-html">
+:root {
+   --primary-h: <span class="hue-value">25</span>; /* Any value from 0 to 255 controlling the Hue */
+}
+</pre>
 
 ### Inserting Extra Content Between `<head>` Tags
 
