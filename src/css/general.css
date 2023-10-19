@@ -54,8 +54,13 @@ hr {
     margin-bottom: 2rem;
 }
 
-h1, h2, h3, h4, h5, h6, .navbar-brand {
+h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--fg-shaded);
 }
 
 .navbar-logo {

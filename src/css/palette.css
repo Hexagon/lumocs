@@ -27,13 +27,13 @@
 :root {
 
     /* Color Palette - Light mode is default */
-    --fg__light: hsl(var(--primary-h), 1%, 99%);
-    --fg-shaded__light: hsl(var(--primary-h), 1%, 95%);
+    --fg__light: hsl(var(--primary-h), 1%, 2%);
+    --fg-shaded__light: hsl(var(--primary-h), 1%, 10%);
     --bg__light: hsl(var(--primary-h), 1%, 100%);
     --bg-shaded__light: hsl(var(--primary-h), 1%, 93%);
     --bg-shaded-2__light: hsl(var(--primary-h), 1%, 88%);
-    --primary__light: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
-    --primary-highlight__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 10%));
+    --primary__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 15%));
+    --primary-highlight__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 30%));
     
     /* Color Palette - Dark mode overrides (only used internally, overrides defaults automatically) */
     --fg__dark: hsl(var(--primary-h), 1%, 99%);
@@ -41,8 +41,8 @@
     --bg__dark: hsl(var(--primary-h), 1%, 2%);
     --bg-shaded__dark: hsl(var(--primary-h), 1%, 1%);
     --bg-shaded-2__dark: hsl(var(--primary-h), 1%, 0%);
-    --primary__dark: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
-    --primary-highlight__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 10%));
+    --primary__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 15%));
+    --primary-highlight__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 30%));
 }
 
 /* Light mode default */

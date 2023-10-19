@@ -31,11 +31,17 @@ aside nav > ol:first-of-type, aside nav > ul:first-of-type {
 aside .level1 {
     padding-left: 1rem;
 }
+aside .level1 a {
+    color: var(--fg-shaded);
+}
 
 /* Indent level 2 navigation items with smaller font size */
 aside .level2 {
     padding-left: 2rem;
     font-size: 0.95rem;
+}
+aside .level2 a {
+    color: var(--fg-shaded);
 }
 
 aside i {
