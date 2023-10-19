@@ -1,0 +1,92 @@
+/**
+* Calculate a custom color palette from HSL values
+* Automatically takes light/dark-mode into account
+* 
+* Author: Hexagon <hexagon@56k.guru>
+* License: MIT
+*
+* Customize theme color by changing Hue, Saturation and Lightness 
+*/
+:root {
+    --primary-h: 255;
+    --primary-s: 98%;
+    --primary-l: 50%; /* Lightness should always be around 50%, to allow the same base color for dark and light themes */
+}
+/**
+* Then, the following variables are defined for global use: 
+* 
+*  --fg
+*  --fg-shaded
+*  --bg
+*  --bg-shaded
+*  --bg-shaded-2
+*  --primary
+*  --primary-highlight
+*
+*/
+:root {
+
+    /* Color Palette - Light mode is default */
+    --fg__light: hsl(var(--primary-h), 1%, 99%);
+    --fg-shaded__light: hsl(var(--primary-h), 1%, 95%);
+    --bg__light: hsl(var(--primary-h), 1%, 100%);
+    --bg-shaded__light: hsl(var(--primary-h), 1%, 93%);
+    --bg-shaded-2__light: hsl(var(--primary-h), 1%, 88%);
+    --primary__light: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    --primary-highlight__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 10%));
+    
+    /* Color Palette - Dark mode overrides (only used internally, overrides defaults automatically) */
+    --fg__dark: hsl(var(--primary-h), 1%, 99%);
+    --fg-shaded__dark: hsl(var(--primary-h), 1%, 98%);
+    --bg__dark: hsl(var(--primary-h), 1%, 2%);
+    --bg-shaded__dark: hsl(var(--primary-h), 1%, 1%);
+    --bg-shaded-2__dark: hsl(var(--primary-h), 1%, 0%);
+    --primary__dark: hsl(var(--primary-h), var(--primary-s), var(--primary-l));
+    --primary-highlight__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 10%));
+}
+
+/* Light mode default */
+:root {
+    --fg: var(--fg__light);
+    --fg-shaded: var(--fg-shaded__light);
+    --bg: var(--bg__light);
+    --bg-shaded: var(--bg-shaded__light);
+    --bg-shaded-2: var(--bg-shaded-2__light);
+    --primary: var(--primary__light);
+    --primary-highlight: var(--primary-highlight__light);
+}
+
+/* Light mode forced */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --fg: var(--fg__light);
+    --fg-shaded: var(--fg-shaded__light);
+    --bg: var(--bg__light);
+    --bg-shaded: var(--bg-shaded__light);
+    --bg-shaded-2: var(--bg-shaded-2__light);
+    --primary: var(--primary__light);
+    --primary-highlight: var(--primary-highlight__light);
+}
+/* Dark mode overrides - Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --fg: var(--fg__dark);
+        --fg-shaded: var(--fg-shaded__dark);
+        --bg: var(--bg__dark);
+        --bg-shaded: var(--bg-shaded__dark);
+        --bg-shaded-2: var(--bg-shaded-2__dark);
+        --primary: var(--primary__dark);
+        --primary-highlight: var(--primary-highlight__dark);
+    }
+}
+
+/* Dark mode overrides - Automatically enabled if user has Dark mode enabled */
+[data-theme="dark"] {
+    --fg: var(--fg__dark);
+    --fg-shaded: var(--fg-shaded__dark);
+    --bg: var(--bg__dark);
+    --bg-shaded: var(--bg-shaded__dark);
+    --bg-shaded-2: var(--bg-shaded-2__dark);
+    --primary: var(--primary__dark);
+    --primary-highlight: var(--primary-highlight__dark);
+}

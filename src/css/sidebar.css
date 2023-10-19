@@ -46,12 +46,12 @@ aside i {
 
 /* Hover effect for icons */
 aside i:hover {
-    background-color: var(--alt-background-color);
+    background-color: var(--bg-shaded);
     border-radius: 20%;
 }
 
 /* Sticky sidebar navigation */
-aside nav {
+aside .aside-content {
     position: sticky;
     top: 1rem;
 }

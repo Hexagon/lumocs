@@ -1,22 +1,21 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
 
-/* Theme */
+/* Customize Pico.css */
 :root {
-    --badge-color: #333;
-    --badge-background: #CCC;
-    --badge-color-alt: #333;
-    --badge-background-alt: rgb(8, 211, 247);
     --font-size: 13px;
-}
 
-[data-theme="dark"] {
-    --alt-background-color: rgb(12, 18, 22);
-    --alt-border-color: rgb(22, 28, 32);
-}
+    --color: var(--fg);
 
-[data-theme="light"] {
-    --alt-background-color: rgb(240, 244, 248);
-    --alt-border-color: rgb(230, 234, 238);
+    /* Transfer palette to Pico.css */
+    --primary-hover: var(--primary-highlight);
+    --primary-focus: var(--primary-highlight);
+    --primary-inverse: var(--fg);
+  
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --switch-color: var(--primary-inverse);
+    --switch-checked-background-color: var(--primary);
+  
 }
 
 /* Reset Pico CSS Responsive padding */
@@ -29,6 +28,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    background-color: var(--bg)
 }
 
 /* Pico CSS Overrides */
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 /* Header */
 aside, footer {
-    background-color: var(--alt-background-color);
+    background-color: var(--bg-shaded);
 }
 
 header nav, aside nav {
@@ -143,7 +143,7 @@ header nav, aside nav {
 }
 /* Footer */
 footer {
-    border-top: 1px solid var(--alt-border-color);
+    border-top: 1px solid var(--bg-shaded-2);
     margin-top: 3rem;
     flex-shrink: 0;
 }
@@ -183,7 +183,7 @@ li p {
 
 #hamburger-btn {
     cursor: pointer;
-    background-color: var(--alt-border-color);
+    background-color: var(--bg-shaded-2);
     padding: 6px 10px 6px 10px;
 }
 

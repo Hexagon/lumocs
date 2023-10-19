@@ -4,7 +4,7 @@
   column-gap: 0;
 }
 .hero-box {
-    background-color: var(--alt-background-color);
+    background-color: var(--bg-shaded);
     padding: 1rem;
 }
 .hero-box code {
@@ -13,14 +13,14 @@
     border-radius: 0.5rem;
     margin-top: 1rem;
     word-break: break-word;
-    background-color: var(--background-color);
-    color: var(--primary-dark);
+    background-color: var(--bg-normal);
+    color: var(--fg-normal);
     width: 100%;
 }
 
 .hero-box code pre {
-    background-color: var(--background-color);
-    color: var(--primary-dark);
+    background-color: var(--bg-normal);
+    color: var(--fg-normal);
 }
 
 .small-quote {

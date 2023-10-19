@@ -22,10 +22,10 @@ title: hexagon.56k.guru
     <link href="/css/github-dark.min.css" rel="stylesheet">
 
     <!-- Lumocs CSS -->
+    <link href="/css/palette.css" rel="stylesheet" inline>
     <link href="/css/general.css" rel="stylesheet" inline>
     <link href="/css/sidebar.css" rel="stylesheet" inline>
     <link href="/css/blockquotes.css" rel="stylesheet" inline>
-    <link href="/css/theme.css" rel="stylesheet" inline>
     
     <!-- Lumocs JS -->
     <script src="/js/theme-switcher.js" inline></script>
@@ -35,6 +35,11 @@ title: hexagon.56k.guru
     <!-- Overridable custom content -->
     {% include "head.njk" %}
 
+    <script>
+      function setHue(deg) {
+        document.querySelector(':root').style.setProperty('--primary-h', deg);
+      }
+    </script>
   </head>
   {{ content | safe }}
 </html>
