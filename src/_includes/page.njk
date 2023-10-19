@@ -2,46 +2,22 @@
 layout: layout/body.njk
 ---
 
-  <div class="main-wrapper">
-    <main>
-      <!-- content -->
-      <div class="grid">
-        <!-- Sidebar -->
-        <aside>
-          <div class="aside-content">
-            <nav>
-              <ul>
-
-                <!-- Hamburger Icon -->
-                <li id="hamburger-wrapper">
-                  <div id="hamburger-btn">
-                  <i class="fas fa-bars"></i>
-                  </div>
-                </li>
-
-                <!-- Brand Name -->
-                <li>
-                  {% if metas.logo %}
-                    <img class="navbar-logo" src="{{ metas.icon }}">
-                  {% endif %}
-                  <a class="navbar-brand" href="/">
-                    {{ metas.site }}
-                  </a>
-                </li>
-
-              </ul>
-            </nav>
-            {% include "partials/sidebar.njk" %}
-          </div>
-        </aside>
-        <section>
-          <header class="container-fluid">
-              {% include "partials/nav.njk" %}
-          </header>
-          {% include "components/search.njk" %}
-          {% include "components/breadcrumbs.njk" %}
+  <main>
+    <!-- content -->
+    <div class="grid">
+      <!-- Sidebar -->
+      <aside>
+        <div class="aside-content">
+          {% include "partials/sidebar.njk" %}
+        </div>
+      </aside>
+      <section>
+        <header>
+            {% include "partials/nav.njk" %}
+        </header>
+        <article>
           {{ content | safe }}
-        </section>
-      </div>
-    </main>
-  </div>
+        </article>
+      </section>
+    </div>
+  </main>

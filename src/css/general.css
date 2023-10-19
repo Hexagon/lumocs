@@ -32,13 +32,22 @@ body {
 }
 
 /* Pico CSS Overrides */
-.container section > :first-child {
+article > :first-child {
     margin-top: 0px;
 }
-.container section > :first-child > :first-child {
+article > :first-child > :first-child {
     margin-top: 0px;
 }
-
+.grid {
+    column-gap: 0px;
+}
+article {
+    margin: 0;
+    box-shadow: none;
+    padding:30px;
+    padding-top:15px;
+    background-color: var(--bg);
+}
 
 p {
     margin-top: 2rem;
@@ -84,44 +93,61 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
     main > .grid {
-        grid-template-columns: 30% auto;
+        grid-template-columns: 25% auto;
     }
     main > .gridright {
-        grid-template-columns: auto 30%;
+        grid-template-columns: auto 25%;
     }
     #hamburger-wrapper {
         display: none;
+    }
+    .mobile {
+        display: none;
+    }
+    .menu {
+        display: block;
     }
     .grid>aside>.aside-content,.gridright>aside>.aside-content  {
         max-width:242px;
     }
     .grid>section,.gridright>section  {
-        max-width:750px;
+        max-width:715px;
     }
     .grid>aside>.aside-content {
         margin-left: auto;
     }
     .grid>section {
         margin-right: auto;
-        padding-left: 1rem;
     }
     .gridright>aside>.aside-content {
         margin-right: auto;
     }
     .gridright>section {
         margin-left: auto;
-        padding-right: 1rem;
     }
 }
 
 @media (max-width: 991px) {
     .grid > aside {
-        display: none;
         width: 100%;
-        margin-top: 0.5rem !important;
+    }
+    .grid > section {
+        margin-left: 2rem;
+    }
+    aside > section {
+        display: none;
     }
     #hamburger-wrapper {
-        display: block;
+        display: inline;
+    }
+    .mobile {
+        display: inline;
+    }
+    section>header {
+        display:none;
+    }
+    .menu {
+        display: none;
     }
 }
 
@@ -140,7 +166,7 @@ header nav, aside nav {
 }
 
 /* Main Content */
-.main-wrapper, main, main.container {
+main {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -181,18 +207,29 @@ li p {
     margin: 0;
 }
 
-/* Hamburger */
-#hamburger-wrapper {
-    padding: 0px;
+section>header {
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 5px 5px -5px var(--bg);
+    border-bottom: 1px solid var(--bg-shaded);
+    padding-left: 30px;
+    background-color: var(--bg);
 }
 
-#hamburger-btn {
-    cursor: pointer;
-    background-color: var(--bg-shaded-2);
-    padding: 6px 10px 6px 10px;
+/* Headers */
+header>ul>li {
+    display: inline-block;
+    padding:0;
+    margin:0;
+    margin-right: 1.5rem;
 }
-
-/* Breadcrumbs */
-.breadcrumbs {
-    margin-bottom: 10px;
+header>ul>li>a {
+    display: inline;
+    padding: 0.2rem;
+}
+header>ul {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 0px;
+    margin:0px;
 }

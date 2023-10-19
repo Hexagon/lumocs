@@ -1,16 +1,22 @@
-<nav>
-  <ul>
 
+  <ul>
+    
+    {% include "components/search.njk" %}
+    
+    <li>
+      {% include "components/breadcrumbs.njk" %}
+    </li>
+    
     <!-- Light/Dark Theme Selector -->
-    <li><span id="theme-switcher"><i id="theme-icon" class="fas fa-moon"></i></span></li>
+    <li class="right"><span class="theme-switcher"><i id="theme-icon" class="fas fa-moon"></i></span></li>
 
     <!-- Aux Top Links -->
     {% for link in top_links %}
-      <li>
+      <li class="right">
         <a href="{{ link.url }}" title="{{ link.title }}" title="{{ link.title }}">
           <i class="{{ link.icon }}"></i>
         </a>
       </li>
     {% endfor %}
+    
   </ul>      
-</nav>

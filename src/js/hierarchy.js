@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   function handleUpClick(event) {
     event.preventDefault();
-    console.log("wat");
     const parentLi = event.target.closest("li");
     if (parentLi) {
       parentLi.classList.add("collapsed");
@@ -10,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function handleDownClick(event) {
     event.preventDefault();
-    console.log("wat2");
     const parentLi = event.target.closest("li");
     if (parentLi) {
       parentLi.classList.remove("collapsed");

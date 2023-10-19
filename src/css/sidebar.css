@@ -1,5 +1,5 @@
 /* Reset margins for ul and li elements inside the aside */
-aside nav ul,
+aside nav ul, aside header ul,
 aside li {
     margin: 0;
     margin-inline: 0;
@@ -17,6 +17,10 @@ aside a {
 aside nav {
     margin-bottom: 18px;
 }
+aside section {
+    margin-top: 18px;
+}
+
 
 aside nav > ol, aside nav > ul {
     margin-bottom: 18px;
@@ -59,7 +63,7 @@ aside i:hover {
 /* Sticky sidebar navigation */
 aside .aside-content {
     position: sticky;
-    top: 1rem;
+    top: 0;
 }
 
 /* Expand/Collapse styles */
@@ -80,4 +84,25 @@ li.collapsed > div > .fa-chevron-up {
 /* Cursor styles for expand/collapse icons */
 .down, .up {
     cursor: pointer;
+}
+
+
+/* Hamburger */
+#hamburger-wrapper {
+    padding: 0px;
+    margin-right: 0px;
+}
+
+#hamburger-btn {
+    display: inline;
+    padding: 0px;
+}
+
+#hamburger-btn i {
+    cursor: pointer;
+    background-color: var(--bg-shaded-2);
+}
+
+aside header {
+    border-bottom: 1px solid var(--bg-shaded-2);
 }

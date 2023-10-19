@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("hamburger-wrapper").addEventListener(
     "click",
     function () {
-      const sidebar = document.querySelector("aside");
+      const sidebar = document.querySelector(".menu");
       if (sidebar.style.display === "none" || sidebar.style.display === "") {
-        sidebar.style.display = "block";
+        sidebar.style.display = "inline";
       } else {
         sidebar.style.display = "";
       }
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Hide hamburger menu when clicking outside
   document.addEventListener("click", function (event) {
-    const sidebar = document.querySelector("aside");
+    const sidebar = document.querySelector(".menu");
     const isClickInside = sidebar.contains(event.target);
     const isHamburgerClicked = document.getElementById("hamburger-wrapper")
       .contains(event.target);

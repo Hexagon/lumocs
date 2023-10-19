@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const html = document.documentElement;
-  const switcher = document.getElementById("theme-switcher");
-  const themeIcon = document.getElementById("theme-icon");
+  const switcher = document.querySelectorAll(".theme-switcher");
+  const themeIcon = document.querySelectorAll(".theme-icon");
 
   // Function to determine whether user has a system preference for dark mode
   const userPrefersDark = () =>
@@ -16,15 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   const inverseTheme = preferredTheme === "dark" ? "light" : "dark";
   html.setAttribute("data-theme", preferredTheme);
-  switcher.setAttribute("data-theme", inverseTheme);
+  switcher.forEach(e=>e.setAttribute("data-theme", inverseTheme));
 
   // Set the correct initial icon
-  themeIcon.className = preferredTheme === "dark"
+  themeIcon.forEach(e=>e.className = preferredTheme === "dark"
     ? "fas fa-sun"
-    : "fas fa-moon";
+    : "fas fa-moon");
 
   // Event Listener for Switch Theme button
-  switcher.addEventListener("click", () => {
+  switcher.forEach(e=>e.addEventListener("click", () => {
     const currentTheme = html.getAttribute("data-theme");
     const newTheme = currentTheme === "light" ? "dark" : "light";
     const newInverseTheme = newTheme === "dark" ? "light" : "dark";
@@ -34,5 +34,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Change the Font Awesome icon based on the new theme
     themeIcon.className = newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
-  });
+  }));
 });
