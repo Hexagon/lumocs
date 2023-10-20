@@ -49,11 +49,7 @@ article {
     background-color: var(--bg);
 }
 
-p {
-    margin-top: 2rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, article>p, article>ul, article>ol, article>pre {
     margin-top: 2rem;
     margin-bottom: 0.25rem;
 }
@@ -131,11 +127,14 @@ h1, h2, h3, h4, h5, h6 {
     .grid > aside {
         width: 100%;
     }
-    .grid > section {
-        margin-left: 2rem;
-    }
     aside > section {
         display: none;
+    }
+    aside header {
+        padding-left:15px;
+    }
+    article {
+        padding:15px;
     }
     #hamburger-wrapper {
         display: inline;
@@ -147,6 +146,9 @@ h1, h2, h3, h4, h5, h6 {
         display:none;
     }
     .menu {
+        display: none;
+    }
+    .navbar-brand {
         display: none;
     }
 }

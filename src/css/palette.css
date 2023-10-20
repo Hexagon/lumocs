@@ -8,9 +8,9 @@
 * Customize theme color by changing Hue, Saturation and Lightness 
 */
 :root {
-    --primary-h: 191;
-    --primary-s: 98%;
-    --primary-l: 50%; /* Lightness should always be around 50%, to allow the same base color for dark and light themes */
+    --primary-h: 24;
+    --primary-s: 100%;
+    --primary-l: 57%; /* Lightness should always be around 50%, to allow the same base color for dark and light themes */
 }
 /**
 * Then, the following variables are defined for global use: 
@@ -29,20 +29,20 @@
     /* Color Palette - Light mode is default */
     --fg__light: hsl(var(--primary-h), 1%, 2%);
     --fg-shaded__light: hsl(var(--primary-h), 1%, 10%);
-    --bg__light: hsl(var(--primary-h), 1%, 100%);
-    --bg-shaded__light: hsl(var(--primary-h), 1%, 93%);
-    --bg-shaded-2__light: hsl(var(--primary-h), 1%, 88%);
-    --primary__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 15%));
-    --primary-highlight__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 30%));
+    --bg__light: hsl(var(--primary-h), 15%, 100%);
+    --bg-shaded__light: hsl(var(--primary-h), 15%, 93%);
+    --bg-shaded-2__light: hsl(var(--primary-h), 15%, 88%);
+    --primary__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 20%));
+    --primary-highlight__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 20%));
     
     /* Color Palette - Dark mode overrides (only used internally, overrides defaults automatically) */
     --fg__dark: hsl(var(--primary-h), 1%, 99%);
     --fg-shaded__dark: hsl(var(--primary-h), 1%, 98%);
-    --bg__dark: hsl(var(--primary-h), 1%, 10%);
-    --bg-shaded__dark: hsl(var(--primary-h), 1%, 7%);
-    --bg-shaded-2__dark: hsl(var(--primary-h), 1%, 5%);
-    --primary__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 15%));
-    --primary-highlight__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 30%));
+    --bg__dark: hsl(var(--primary-h), 3%, 12%);
+    --bg-shaded__dark: hsl(var(--primary-h), 3%, 10%);
+    --bg-shaded-2__dark: hsl(var(--primary-h), 3%, 8%);
+    --primary__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l)));
+    --primary-highlight__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 10%));
 }
 
 /* Light mode default */
