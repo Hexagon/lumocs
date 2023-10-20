@@ -4,7 +4,7 @@
   column-gap: 0;
 }
 .hero-box {
-    background-color: var(--bg-shaded);
+    background-color: var(--bg-shaded-2);
     padding: 1rem;
 }
 .hero-box code {
@@ -13,16 +13,14 @@
     border-radius: 0.5rem;
     margin-top: 1rem;
     word-break: break-word;
-    background-color: var(--bg-normal);
-    color: var(--fg-normal);
+    background-color: var(--bg-shaded-inv);
+    color: var(--fg-shaded-inv);
     width: 100%;
 }
-
 .hero-box code pre {
-    background-color: var(--bg-normal);
-    color: var(--fg-normal);
+    background-color: var(--bg-shaded-inv);
+    color: var(--fg-shaded-inv);
 }
-
 .small-quote {
     display: block;
     font-size: 0.85rem;

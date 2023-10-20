@@ -1,5 +1,3 @@
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css";
-
 /* Customize Pico.css */
 :root {
     --font-size: 13px;
@@ -22,33 +20,19 @@
 body > header, body > footer, body > main {
     padding: 0;
 }
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+nav, body, article {
     margin: 0;
-    background-color: var(--bg)
 }
 
 /* Pico CSS Overrides */
-article > :first-child {
-    margin-top: 0px;
-}
-article > :first-child > :first-child {
-    margin-top: 0px;
-}
-.grid {
-    column-gap: 0px;
-}
+article > :first-child, article > :first-child > :first-child { margin-top: 0px; }
+.grid { column-gap: 0px; }
 article {
-    margin: 0;
     box-shadow: none;
     padding:30px;
     padding-top:15px;
     background-color: var(--bg);
 }
-
 h1, h2, h3, h4, h5, h6, article>p, article>ul, article>ol, article>pre {
     margin-top: 2rem;
     margin-bottom: 0.25rem;
@@ -63,18 +47,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
 
-.navbar-brand {
-    font-weight: bold;
-    color: var(--fg-shaded);
-}
-
-.navbar-logo {
-    max-height: 1.5rem;
-    max-width: 1.5rem;
-    margin-right: 0.5rem;
-    margin-left: 0.75rem;
-}
-
 @media (min-width: 576px) {
     :root {
         --font-size: 14px;
@@ -87,6 +59,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* General Customization */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg)
+}
+
 @media (min-width: 992px) {
     main > .grid {
         grid-template-columns: 25% auto;
@@ -94,10 +74,7 @@ h1, h2, h3, h4, h5, h6 {
     main > .gridright {
         grid-template-columns: auto 25%;
     }
-    #hamburger-wrapper {
-        display: none;
-    }
-    .mobile {
+    #hamburger-wrapper, .mobile {
         display: none;
     }
     .menu {
@@ -109,17 +86,11 @@ h1, h2, h3, h4, h5, h6 {
     .grid>section,.gridright>section  {
         max-width:715px;
     }
-    .grid>aside>.aside-content {
+    .grid>aside>.aside-content, .gridright>section {
         margin-left: auto;
     }
-    .grid>section {
+    .grid>section, .gridright>aside>.aside-content {
         margin-right: auto;
-    }
-    .gridright>aside>.aside-content {
-        margin-right: auto;
-    }
-    .gridright>section {
-        margin-left: auto;
     }
 }
 
@@ -127,44 +98,60 @@ h1, h2, h3, h4, h5, h6 {
     .grid > aside {
         width: 100%;
     }
-    aside > section {
-        display: none;
-    }
     aside header {
         padding-left:15px;
     }
     article {
         padding:15px;
     }
-    #hamburger-wrapper {
+    #hamburger-wrapper, .mobile {
         display: inline;
     }
-    .mobile {
-        display: inline;
-    }
-    section>header {
-        display:none;
-    }
-    .menu {
-        display: none;
-    }
-    .navbar-brand {
+    aside>section, section>header, .menu, .navbar-brand {
         display: none;
     }
 }
 
 /* Header */
-aside, footer {
-    background-color: var(--bg-shaded);
+.navbar-brand {
+    font-weight: bold;
+    color: var(--fg-shaded);
 }
 
-header nav, aside nav {
-    margin: 0;
+.navbar-logo {
+    max-height: 1.5rem;
+    max-width: 1.5rem;
+    margin-right: 0.5rem;
+    margin-left: 0.75rem;
 }
 
 #theme-switcher {
     cursor: pointer;
     margin-right: 1rem;
+}
+section>header {
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 5px 5px -5px var(--bg);
+    border-bottom: 1px solid var(--bg-shaded);
+    padding-left: 30px;
+    background-color: var(--bg);
+}
+header>ul>li {
+    display: inline-block;
+    padding:0;
+    margin:0;
+    margin-right: 1.5rem;
+}
+header>ul>li>a {
+    display: inline;
+    padding: 0.2rem;
+}
+header>ul {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 0px;
+    margin:0px;
 }
 
 /* Main Content */
@@ -174,8 +161,10 @@ main {
     flex: 1;
     min-height: 100%;
 }
+
 /* Footer */
 footer {
+    background-color: var(--bg-shaded);
     border-top: 1px solid var(--bg-shaded-2);
     margin-top: 3rem;
     flex-shrink: 0;
@@ -203,35 +192,4 @@ footer .notice {
 
 .bold {
     font-weight: bold;
-}
-
-li p {
-    margin: 0;
-}
-
-section>header {
-    position: sticky;
-    top: 0px;
-    box-shadow: 0 5px 5px -5px var(--bg);
-    border-bottom: 1px solid var(--bg-shaded);
-    padding-left: 30px;
-    background-color: var(--bg);
-}
-
-/* Headers */
-header>ul>li {
-    display: inline-block;
-    padding:0;
-    margin:0;
-    margin-right: 1.5rem;
-}
-header>ul>li>a {
-    display: inline;
-    padding: 0.2rem;
-}
-header>ul {
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 0px;
-    margin:0px;
 }

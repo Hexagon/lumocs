@@ -49,9 +49,11 @@
 :root {
     --fg: var(--fg__light);
     --fg-shaded: var(--fg-shaded__light);
+    --fg-shaded-inv: var(--fg-shaded__dark);
     --bg: var(--bg__light);
     --bg-shaded: var(--bg-shaded__light);
     --bg-shaded-2: var(--bg-shaded-2__light);
+    --bg-shaded-inv: var(--bg-shaded__dark);
     --primary: var(--primary__light);
     --primary-highlight: var(--primary-highlight__light);
 }
@@ -61,9 +63,11 @@
 :root:not([data-theme="dark"]) {
     --fg: var(--fg__light);
     --fg-shaded: var(--fg-shaded__light);
+    --fg-shaded-inv: var(--fg-shaded__dark);
     --bg: var(--bg__light);
     --bg-shaded: var(--bg-shaded__light);
     --bg-shaded-2: var(--bg-shaded-2__light);
+    --bg-shaded-inv: var(--bg-shaded__dark);
     --primary: var(--primary__light);
     --primary-highlight: var(--primary-highlight__light);
 }
@@ -72,9 +76,11 @@
     :root:not([data-theme]) {
         --fg: var(--fg__dark);
         --fg-shaded: var(--fg-shaded__dark);
+        --fg-shaded-inv: var(--fg-shaded__light);
         --bg: var(--bg__dark);
         --bg-shaded: var(--bg-shaded__dark);
         --bg-shaded-2: var(--bg-shaded-2__dark);
+        --bg-shaded-inv: var(--bg-shaded__light);
         --primary: var(--primary__dark);
         --primary-highlight: var(--primary-highlight__dark);
     }
@@ -84,9 +90,11 @@
 [data-theme="dark"] {
     --fg: var(--fg__dark);
     --fg-shaded: var(--fg-shaded__dark);
+    --fg-shaded-inv: var(--fg-shaded__light);
     --bg: var(--bg__dark);
     --bg-shaded: var(--bg-shaded__dark);
     --bg-shaded-2: var(--bg-shaded-2__dark);
+    --bg-shaded-inv: var(--bg-shaded__light);
     --primary: var(--primary__dark);
     --primary-highlight: var(--primary-highlight__dark);
 }

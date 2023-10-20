@@ -1,4 +1,7 @@
 /* Reset margins for ul and li elements inside the aside */
+aside {
+    background-color: var(--bg-shaded);
+}
 aside nav ul, aside header ul,
 aside li {
     margin: 0;
@@ -20,7 +23,6 @@ aside nav {
 aside section {
     margin-top: 18px;
 }
-
 
 aside nav > ol, aside nav > ul {
     margin-bottom: 18px;

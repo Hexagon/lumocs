@@ -16,6 +16,7 @@ export default function (options: Partial<Options> = {}) {
       "css/sidebar.css",
       "css/blockquotes.css",
       "css/palette.css",
+      "css/font-awesome.css",
 
       // JS
       "js/theme-switcher.js",

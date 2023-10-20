@@ -154,7 +154,7 @@ classes. Here are examples:
 
 > This is a success blockquote. { .success }
 
-> This is a error blockquote. { .success }
+> This is a error blockquote. { .error }
 
 ## Embedding Code
 
