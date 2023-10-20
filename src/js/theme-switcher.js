@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const newTheme = currentTheme === "light" ? "dark" : "light";
     const newInverseTheme = newTheme === "dark" ? "light" : "dark";
     html.setAttribute("data-theme", newTheme);
-    switcher.setAttribute("data-theme", newInverseTheme);
+    switcher.forEach(s=>s.setAttribute("data-theme", newInverseTheme));
     localStorage.setItem("preferredTheme", newTheme);
 
     // Change the Font Awesome icon based on the new theme

@@ -1,7 +1,7 @@
 ---
-layout: layout/body.njk
+layout: layout/html.njk
 ---
-
+<body>
   <main>
     <!-- content -->
     <div class="grid">
@@ -21,3 +21,9 @@ layout: layout/body.njk
       </section>
     </div>
   </main>
+  <footer class="container-fluid">
+    <div class="container">
+      {% include "partials/footer.njk" %}
+    </div>
+  </footer>
+</body>

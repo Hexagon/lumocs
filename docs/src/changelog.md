@@ -13,6 +13,13 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.23
+
+**Fixed**
+
+- Change to two column layout
+- Add customizable palette
+
 ## Version 0.0.22
 
 **Fixed**
