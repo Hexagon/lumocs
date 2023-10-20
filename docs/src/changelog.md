@@ -13,6 +13,12 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.24
+
+**Fixed**
+
+- Changed default color back to blue
+
 ## Version 0.0.23
 
 **Fixed**

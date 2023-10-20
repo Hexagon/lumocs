@@ -19,8 +19,6 @@ aside a {
 
 aside nav {
     margin-bottom: 18px;
-}
-aside section {
     margin-top: 18px;
 }
 
@@ -50,14 +48,14 @@ aside .level2 a {
     color: var(--fg-shaded);
 }
 
-aside i {
+aside section i {
     padding: 0.5rem;
     margin: 0;
     font-size: 0.8rem;
 }
 
 /* Hover effect for icons */
-aside i:hover {
+aside section i:hover {
     background-color: var(--bg-shaded);
     border-radius: 20%;
 }

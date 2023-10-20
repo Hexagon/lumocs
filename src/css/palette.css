@@ -8,7 +8,7 @@
 * Customize theme color by changing Hue, Saturation and Lightness 
 */
 :root {
-    --primary-h: 24;
+    --primary-h: 192;
     --primary-s: 100%;
     --primary-l: 57%; /* Lightness should always be around 50%, to allow the same base color for dark and light themes */
 }
@@ -32,8 +32,8 @@
     --bg__light: hsl(var(--primary-h), 15%, 100%);
     --bg-shaded__light: hsl(var(--primary-h), 15%, 93%);
     --bg-shaded-2__light: hsl(var(--primary-h), 15%, 88%);
-    --primary__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 20%));
-    --primary-highlight__light: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) - 20%));
+    --primary__light: hsl(var(--primary-h), calc(var(--primary-s) + 20%), calc(var(--primary-l) - 20%));
+    --primary-highlight__light: hsl(var(--primary-h), calc(var(--primary-s) + 20%), calc(var(--primary-l) - 15%));
     
     /* Color Palette - Dark mode overrides (only used internally, overrides defaults automatically) */
     --fg__dark: hsl(var(--primary-h), 1%, 99%);

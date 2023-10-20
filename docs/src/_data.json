@@ -8,7 +8,7 @@
   },
 
   "substitute": {
-    "$LUMOCS_VERSION": "0.0.23",
+    "$LUMOCS_VERSION": "0.0.24",
     "$LUME_VERSION": "v1.19.1"
   },
 
