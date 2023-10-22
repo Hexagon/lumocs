@@ -130,15 +130,16 @@ body {
 
 /* Header */
 .navbar-brand {
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--fg-shaded);
     margin-left: 0.75rem;
 }
 
 .navbar-logo {
-    max-height: 1.5rem;
-    max-width: 1.5rem;
-    margin-right: 0.5rem;
+    max-height: 1.1rem;
+    max-width: 1.1rem;
+    margin-right: 0.0rem;
     margin-left: 0.75rem;
 }
 
@@ -149,10 +150,11 @@ body {
 section>header {
     position: sticky;
     top: 0px;
-    box-shadow: 0 5px 5px -5px var(--bg);
-    border-bottom: 1px solid var(--bg-shaded);
+    box-shadow: 5px 20px 20px -5px var(--bg);
+    border-bottom: 1px solid var(--bg-shaded-3);
     padding-left: 30px;
     background-color: var(--bg);
+    line-height:1.1rem;
 }
 header>ul>li {
     display: inline-block;
@@ -165,8 +167,9 @@ header>ul>li>a {
     padding: 0.2rem;
 }
 header>ul {
-    padding-bottom: 15px;
-    padding-top: 15px;
+    line-height: 1.3rem;
+    padding-bottom: 1.05rem;
+    padding-top: 1.05rem;
     padding-left: 0px;
     margin:0px;
 }

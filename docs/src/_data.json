@@ -2,13 +2,14 @@
   "metas": {
     "site": "Lumocs Documentation",
     "icon": "img/android-chrome-192x192.png",
+    "logo": "/img/android-chrome-192x192.png",
     "title": "=title",
     "description": "=description",
     "lang": "=lang"
   },
 
   "substitute": {
-    "$LUMOCS_VERSION": "0.0.24",
+    "$LUMOCS_VERSION": "0.0.25",
     "$LUME_VERSION": "v1.19.1"
   },
 

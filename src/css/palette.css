@@ -8,9 +8,9 @@
 * Customize theme color by changing Hue, Saturation and Lightness 
 */
 :root {
-    --primary-h: 192;
-    --primary-s: 100%;
-    --primary-l: 57%; /* Lightness should always be around 50%, to allow the same base color for dark and light themes */
+    --primary-h: 195;
+    --primary-s: 85%;
+    --primary-l: 41%; /* Lightness should always be around 50%, to allow the same base color for dark and light themes */
 }
 /**
 * Then, the following variables are defined for global use: 
@@ -20,6 +20,7 @@
 *  --bg
 *  --bg-shaded
 *  --bg-shaded-2
+*  --bg-shaded-3
 *  --primary
 *  --primary-highlight
 *
@@ -32,15 +33,17 @@
     --bg__light: hsl(var(--primary-h), 15%, 100%);
     --bg-shaded__light: hsl(var(--primary-h), 15%, 93%);
     --bg-shaded-2__light: hsl(var(--primary-h), 15%, 88%);
-    --primary__light: hsl(var(--primary-h), calc(var(--primary-s) + 20%), calc(var(--primary-l) - 20%));
+    --bg-shaded-3__light: hsl(var(--primary-h), 15%, 94%);
+    --primary__light: hsl(var(--primary-h), calc(var(--primary-s) + 20%), calc(var(--primary-l)));
     --primary-highlight__light: hsl(var(--primary-h), calc(var(--primary-s) + 20%), calc(var(--primary-l) - 15%));
     
     /* Color Palette - Dark mode overrides (only used internally, overrides defaults automatically) */
     --fg__dark: hsl(var(--primary-h), 1%, 99%);
-    --fg-shaded__dark: hsl(var(--primary-h), 1%, 98%);
-    --bg__dark: hsl(var(--primary-h), 3%, 12%);
-    --bg-shaded__dark: hsl(var(--primary-h), 3%, 10%);
-    --bg-shaded-2__dark: hsl(var(--primary-h), 3%, 8%);
+    --fg-shaded__dark: hsl(var(--primary-h), 2%, 98%);
+    --bg__dark: hsl(var(--primary-h), 10%, 12%);
+    --bg-shaded__dark: hsl(var(--primary-h), 20%, 6%);
+    --bg-shaded-2__dark: hsl(var(--primary-h), 20%, 10%);
+    --bg-shaded-3__dark: hsl(var(--primary-h), 20%, 18%);
     --primary__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l)));
     --primary-highlight__dark: hsl(var(--primary-h), var(--primary-s), calc(var(--primary-l) + 10%));
 }
@@ -53,6 +56,7 @@
     --bg: var(--bg__light);
     --bg-shaded: var(--bg-shaded__light);
     --bg-shaded-2: var(--bg-shaded-2__light);
+    --bg-shaded-3: var(--bg-shaded-3__light);
     --bg-shaded-inv: var(--bg-shaded__dark);
     --primary: var(--primary__light);
     --primary-highlight: var(--primary-highlight__light);
@@ -67,6 +71,7 @@
     --bg: var(--bg__light);
     --bg-shaded: var(--bg-shaded__light);
     --bg-shaded-2: var(--bg-shaded-2__light);
+    --bg-shaded-3: var(--bg-shaded-3__light);
     --bg-shaded-inv: var(--bg-shaded__dark);
     --primary: var(--primary__light);
     --primary-highlight: var(--primary-highlight__light);
@@ -80,6 +85,7 @@
         --bg: var(--bg__dark);
         --bg-shaded: var(--bg-shaded__dark);
         --bg-shaded-2: var(--bg-shaded-2__dark);
+        --bg-shaded-3: var(--bg-shaded-3__dark);
         --bg-shaded-inv: var(--bg-shaded__light);
         --primary: var(--primary__dark);
         --primary-highlight: var(--primary-highlight__dark);
@@ -94,6 +100,7 @@
     --bg: var(--bg__dark);
     --bg-shaded: var(--bg-shaded__dark);
     --bg-shaded-2: var(--bg-shaded-2__dark);
+    --bg-shaded-3: var(--bg-shaded-3__dark);
     --bg-shaded-inv: var(--bg-shaded__light);
     --primary: var(--primary__dark);
     --primary-highlight: var(--primary-highlight__dark);

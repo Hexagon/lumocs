@@ -13,6 +13,12 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.25
+
+**Fixed**
+
+- Various style fixes
+
 ## Version 0.0.24
 
 **Fixed**
