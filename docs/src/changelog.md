@@ -13,6 +13,12 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.0.26
+
+**Fixed**
+
+- Updated Lume `1.19.1` -> `1.19.3`
+
 ## Version 0.0.25
 
 **Fixed**
