@@ -13,6 +13,30 @@ understand the changes at a glance.
 
 <!-- TOC -->
 
+## Version 0.1.2
+
+**Fixed**
+
+- Fixed an issue with the sidebar menu uncollapsing properly
+
+## Version 0.1.1
+
+**Fixed**
+
+- Fixed an issue with the sidebar menu not showing up
+
+## Version 0.1.0
+
+**Breaking**
+
+- Updated Lume `1.19.3` -> `2.0.1`
+
+## Version 0.0.26
+
+**Fixed**
+
+- Updated Lume `1.19.1` -> `1.19.3`
+
 ## Version 0.0.26
 
 **Fixed**
