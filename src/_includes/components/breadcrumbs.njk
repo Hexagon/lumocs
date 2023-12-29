@@ -1,25 +1,25 @@
-{% set currentUrl = page.data.url %}
+{% set currentUrl = page.url %}
 {% set breadcrumbs = [] %}
 {% set found = false %}
 
 <!-- Find the Current Page in Hierarchy -->
 {% for navPage in search.pages("parent=undefined", "nav_order") if not found %}
-    {% set searchParam1 = ["parent='", navPage.data.title, "'"] | join %}
+    {% set searchParam1 = ["parent='", navPage.title, "'"] | join %}
     {% for subPage1 in search.pages(searchParam1, "nav_order") if not found %}
-        {% set searchParam2 = ["parent='", subPage1.data.title, "'"] | join %}
+        {% set searchParam2 = ["parent='", subPage1.title, "'"] | join %}
         {% for subPage2 in search.pages(searchParam2, "nav_order") if not found %}
-            {% if subPage2.data.url == currentUrl %}
-                {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}, {'title': subPage1.data.title, 'url': subPage1.data.url}, {'title': subPage2.data.title, 'url': subPage2.data.url}] %}
+            {% if subPage2.url == currentUrl %}
+                {% set breadcrumbs = [{'title': navPage.title, 'url': navPage.url}, {'title': subPage1.title, 'url': subPage1.url}, {'title': subPage2.title, 'url': subPage2.url}] %}
                 {% set found = true %}
             {% endif %}
         {% endfor %}
-        {% if not found and subPage1.data.url == currentUrl %}
-            {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}, {'title': subPage1.data.title, 'url': subPage1.data.url}] %}
+        {% if not found and subPage1.url == currentUrl %}
+            {% set breadcrumbs = [{'title': navPage.title, 'url': navPage.url}, {'title': subPage1.title, 'url': subPage1.url}] %}
             {% set found = true %}
         {% endif %}
     {% endfor %}
-    {% if not found and navPage.data.url == currentUrl %}
-        {% set breadcrumbs = [{'title': navPage.data.title, 'url': navPage.data.url}] %}
+    {% if not found and navPage.url == currentUrl %}
+        {% set breadcrumbs = [{'title': navPage.title, 'url': navPage.url}] %}
         {% set found = true %}
     {% endif %}
 {% endfor %}
