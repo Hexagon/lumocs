@@ -10,7 +10,7 @@ import sitemap from "lume/plugins/sitemap.ts";
 import type { Page, Site } from "lume/core.ts";
 import code_highlight from "lume/plugins/code_highlight.ts";
 
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.1/toc.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.1/toc.ts";
 
 import { renderTOC } from "./toc.ts";
 

@@ -9,8 +9,8 @@
   },
 
   "substitute": {
-    "$LUMOCS_VERSION": "0.1.2",
-    "$LUME_VERSION": "v2.0.1"
+    "$LUMOCS_VERSION": "0.1.3",
+    "$LUME_VERSION": "v2.3.3"
   },
 
   "top_links": [
