@@ -1,11 +1,11 @@
 // Define Lume and Lumocs versions here
-const lumeVersion = "v2.3.3";
-const lumocsVersion = "0.1.3";
+const lumeVersion = "v3.0.0";
+const lumocsVersion = "0.2.0";
 
 // deno.json template
 const denoJsonTemplate = `{
   "tasks": {
-    "lume": "echo \\"import 'lume/cli.ts'\\" | deno run --unstable -A -",
+    "lume": "echo \\"import 'lume/cli.ts'\\" | deno run -A -",
     "serve": "deno task lume -s --port=8000"
   },
   "imports": {
