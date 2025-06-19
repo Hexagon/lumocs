@@ -92,7 +92,7 @@ export default function (options: Options = {}) {
 
     // Copy files
     site
-      .add("css")
-      .add("js");
+      .copy("css")
+      .copy("js");
   };
 }

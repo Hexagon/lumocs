@@ -12,6 +12,7 @@
     ]
   },
   "tasks": {
-    "build": "rm -r demo-repository/docs/ || deno run -A init.ts demo-repository/docs"
+    "build": "rm -r demo-repository/docs/ || deno run -A init.ts demo-repository/docs",
+    "serve": "cd docs &&deno task lume -s --port=8000"
   }
 }
