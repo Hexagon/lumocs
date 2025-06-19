@@ -57,6 +57,7 @@ aside section i {
 aside section i:hover {
   background-color: var(--bg-shaded);
   border-radius: 20%;
+  color: var(--fg-shaded);
 }
 
 /* Sticky sidebar navigation */
