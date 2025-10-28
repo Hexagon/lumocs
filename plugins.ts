@@ -16,7 +16,6 @@ import { renderTOC } from "./toc.ts";
 
 export interface Options {
   date?: Partial<DateOptions>;
-  pagefind?: Partial<PagefindOptions>;
 }
 
 /** Configure the site */
