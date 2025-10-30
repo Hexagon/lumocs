@@ -1,6 +1,6 @@
 // Define Lume and Lumocs versions here
-const lumeVersion = "v2.5.4";
-const lumocsVersion = "0.1.4";
+const lumeVersion = "v3.1.1";
+const lumocsVersion = "0.2.0";
 
 // deno.json template
 const denoJsonTemplate = `{

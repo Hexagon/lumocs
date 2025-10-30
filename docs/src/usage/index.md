@@ -57,8 +57,8 @@ the scripts to build your site.
     "serve": "deno task lume -s --port=8000"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.5.4/",
-    "lumocs/": "https://deno.land/x/lumocs@0.1.4/"
+    "lume/": "https://deno.land/x/lume@v3.1.1/",
+    "lumocs/": "https://deno.land/x/lumocs@0.2.0/"
   }
 }
 ```
