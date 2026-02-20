@@ -88,10 +88,14 @@ async function createFileIfNotExists(
       console.error(` - Error: File already exists: ${filePath}`);
     }
   } catch (error) {
+    if (!(error instanceof Deno.errors.NotFound)) {
+      console.error(` - Error: Could not read: ${filePath}`);
+      return;
+    }
     try {
       await Deno.writeTextFile(filePath, content);
       if (!isQuiet) console.log(` - ${filePath}`);
-    } catch (writeError) {
+    } catch (_writeError) {
       console.error(` - Error: Could not write: ${filePath}`);
     }
   }
@@ -133,7 +137,7 @@ async function main() {
       console.error("Project directory already exists.");
     }
     return;
-  } catch (error) {
+  } catch (_error) {
     // Directory doesn't exist, continue
   }
 
