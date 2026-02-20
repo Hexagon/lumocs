@@ -30,15 +30,12 @@ export default function (options: Partial<Options> = {}) {
 
       // Internal
       "_includes/components/search.njk",
-      "_includes/components/toc.njk",
       "_includes/components/breadcrumbs.njk",
-      "_includes/layout/body.njk",
       "_includes/layout/html.njk",
       "_includes/partials/nav.njk",
       "_includes/partials/footer.njk",
       "_includes/partials/sidebar.njk",
       "_includes/page.njk",
-      "_includes/page_right.njk",
       "_data.json",
     ];
 

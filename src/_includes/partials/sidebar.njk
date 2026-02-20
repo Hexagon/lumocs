@@ -11,7 +11,7 @@
         <!-- Brand Name -->
         <li>
             {% if metas.logo %}
-                <img class="navbar-logo" src="{{ metas.icon | url }}">
+                <img class="navbar-logo" src="{{ metas.logo | url }}" alt="{{ metas.site }}">
             {% endif %}
             <a class="navbar-brand" href="/">
                 {{ metas.site }}
@@ -24,7 +24,7 @@
         <!-- Aux Top Links -->
         {% for link in top_links %}
         <li class="mobile right">
-            <a href="{{ link.url }}" title="{{ link.title }}" title="{{ link.title }}">
+            <a href="{{ link.url }}" title="{{ link.title }}">
             <i class="{{ link.icon }}"></i>
             </a>
         </li>
