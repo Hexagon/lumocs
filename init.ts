@@ -89,7 +89,11 @@ async function createFileIfNotExists(
     }
   } catch (error) {
     if (!(error instanceof Deno.errors.NotFound)) {
-      console.error(` - Error: Could not read: ${filePath}`);
+      const errorDetails =
+        error instanceof Error ? `${error.name}: ${error.message}` : String(error);
+      console.error(
+        ` - Error: Could not read: ${filePath}. Underlying error: ${errorDetails}`,
+      );
       return;
     }
     try {
