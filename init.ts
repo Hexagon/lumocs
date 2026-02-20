@@ -83,10 +83,9 @@ async function createFileIfNotExists(
   isQuiet: boolean,
 ) {
   try {
-    const existingContent = await Deno.readTextFile(filePath);
-    if (existingContent) {
-      console.error(` - Error: File already exists: ${filePath}`);
-    }
+    await Deno.readTextFile(filePath);
+    console.error(` - Error: File already exists: ${filePath}`);
+    return;
   } catch (error) {
     if (!(error instanceof Deno.errors.NotFound)) {
       const errorDetails =
