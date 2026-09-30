@@ -57,7 +57,7 @@ export default function (options: Options = {}) {
       "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.6.0/build/styles/github-dark.min.css",
     );
 
-    site.process([".md"], (pages: Page) => {
+    site.process([".md"], (pages: Page[]) => {
       pages.forEach((page) => {
         // Replace <!-- toc --> with the actual toc from page.data.toc_string
         if (page.data.toc && page.data.toc.length) {
@@ -74,7 +74,7 @@ export default function (options: Options = {}) {
     });
 
     // Substitution feature
-    site.process([".md"], (pages: Page) => {
+    site.process([".md"], (pages: Page[]) => {
       pages.forEach((page) => {
         if (page.data.substitute) {
           for (const obj of Object.entries(page.data.substitute)) {

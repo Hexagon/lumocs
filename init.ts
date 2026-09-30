@@ -83,15 +83,22 @@ async function createFileIfNotExists(
   isQuiet: boolean,
 ) {
   try {
-    const existingContent = await Deno.readTextFile(filePath);
-    if (existingContent) {
-      console.error(` - Error: File already exists: ${filePath}`);
-    }
+    await Deno.readTextFile(filePath);
+    console.error(` - Error: File already exists: ${filePath}`);
+    return;
   } catch (error) {
+    if (!(error instanceof Deno.errors.NotFound)) {
+      const errorDetails =
+        error instanceof Error ? `${error.name}: ${error.message}` : String(error);
+      console.error(
+        ` - Error: Could not read: ${filePath}. Underlying error: ${errorDetails}`,
+      );
+      return;
+    }
     try {
       await Deno.writeTextFile(filePath, content);
       if (!isQuiet) console.log(` - ${filePath}`);
-    } catch (writeError) {
+    } catch (_writeError) {
       console.error(` - Error: Could not write: ${filePath}`);
     }
   }
@@ -133,7 +140,7 @@ async function main() {
       console.error("Project directory already exists.");
     }
     return;
-  } catch (error) {
+  } catch (_error) {
     // Directory doesn't exist, continue
   }
 
